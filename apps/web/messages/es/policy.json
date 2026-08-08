@@ -44,7 +44,7 @@
   },
   "transparency": {
     "title": "Transparencia",
-    "hosting": "La plataforma se aloja en la Unión Europea, bajo una ley que limita lo que cualquier autoridad puede exigir y nos obliga a avisarte si algo va mal.",
+    "hosting": "Los servidores están en la Unión Europea (Ámsterdam), así que los datos de los miembros se guardan bajo la ley europea de protección de datos. Nuestro proveedor de alojamiento, en cambio, es una empresa constituida en Estados Unidos, lo que significa que un procedimiento legal estadounidense podría en principio alcanzar los datos que custodia por cuenta nuestra. Lo consideramos una brecha y no una respuesta cerrada: pasar a un proveedor constituido en la UE es una decisión abierta para la Fundación, y esta página lo dirá con claridad en cualquiera de los dos casos.",
     "requests": "Si un gobierno nos pide datos sobre un miembro, exigimos un procedimiento legal, reducimos lo que se entrega a lo que ese procedimiento realmente obliga, y avisamos al miembro salvo que la ley nos lo prohíba. Publicamos cuántas solicitudes recibimos y a cuántas se atendió.",
     "noTrackers": "No hay píxeles publicitarios, ni analíticas de terceros, ni scripts de redes sociales en ninguna página de este sitio. Nada aquí informa a nadie de tu visita.",
     "logs": "Los registros del servidor guardan una huella de tu dirección durante siete días, para frenar abusos, y nada más.",

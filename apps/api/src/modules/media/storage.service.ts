@@ -36,8 +36,11 @@ export class StorageService implements OnModuleInit {
     this.s3 = new S3Client({
       endpoint: storage?.endpoint,
       region: storage?.region ?? 'eu-central-1',
-      // Required by MinIO and most non-AWS S3 implementations.
-      forcePathStyle: true,
+      // MinIO and most self-hosted S3 servers expect the bucket in the path;
+      // AWS and Railway's storage expect it in the hostname. Getting this wrong
+      // fails only at the first upload, so it is configuration rather than a
+      // hardcoded guess.
+      forcePathStyle: process.env.S3_FORCE_PATH_STYLE !== 'false',
       credentials: {
         accessKeyId: storage?.accessKey ?? '',
         secretAccessKey: storage?.secretKey ?? '',

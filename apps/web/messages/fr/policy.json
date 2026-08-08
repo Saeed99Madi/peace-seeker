@@ -44,7 +44,7 @@
   },
   "transparency": {
     "title": "Transparence",
-    "hosting": "La plateforme est hébergée dans l'Union européenne, sous un droit qui limite ce qu'une autorité peut exiger et nous oblige à vous prévenir si quelque chose tourne mal.",
+    "hosting": "Les serveurs sont dans l’Union européenne (Amsterdam), les données des membres sont donc conservées sous le droit européen de la protection des données. Notre hébergeur est en revanche une société de droit américain, ce qui signifie qu’une procédure judiciaire américaine pourrait en principe atteindre les données qu’il détient pour notre compte. Nous considérons cela comme une faille et non comme une réponse définitive : passer à un hébergeur établi dans l’Union est une décision ouverte pour la Fondation, et cette page le dira franchement dans un cas comme dans l’autre.",
     "requests": "Si un gouvernement nous demande des données sur un membre, nous exigeons une procédure légale, nous restreignons ce qui est produit à ce que cette procédure impose réellement, et nous prévenons le membre sauf si la loi nous l'interdit. Nous publions le nombre de demandes reçues et le nombre auxquelles il a été donné suite.",
     "noTrackers": "Aucun pixel publicitaire, aucune statistique tierce, aucun script de réseau social sur aucune page de ce site. Rien ici ne signale votre visite à qui que ce soit.",
     "logs": "Les journaux du serveur conservent une empreinte de votre adresse pendant sept jours, pour empêcher les abus, et rien d'autre.",

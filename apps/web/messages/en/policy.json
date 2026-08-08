@@ -44,7 +44,7 @@
   },
   "transparency": {
     "title": "Transparency",
-    "hosting": "The platform is hosted in the European Union, under law that constrains what any authority may demand and obliges us to tell you when something goes wrong.",
+    "hosting": "The servers are in the European Union (Amsterdam), so member data is stored under EU data-protection law. Our hosting provider is a company incorporated in the United States, which means US legal process could in principle reach data it holds on our behalf. We treat that as a gap rather than a settled answer: moving to an EU-incorporated host is an open decision for the Foundation, and this page will say so plainly either way.",
     "requests": "If a government asks us for data about a member, we require lawful process, we narrow what is produced to what the process actually compels, and we tell the member unless we are forbidden by law from doing so. We publish the number of requests received and the number complied with.",
     "noTrackers": "There are no advertising pixels, no third-party analytics and no social-media scripts on any page of this site. Nothing here reports your visit to anyone else.",
     "logs": "Server logs keep a hashed form of your address for seven days, to stop abuse, and nothing else.",
