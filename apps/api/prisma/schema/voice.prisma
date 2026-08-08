@@ -1,0 +1,55 @@
+// Module A — The Voice.
+
+/// A-1 — a Voice may exist with no account behind it at all.
+model Voice {
+  id           String           @id @default(uuid())
+  userId       String?
+  user         User?            @relation(fields: [userId], references: [id], onDelete: SetNull)
+  displayName  String
+  /// S-3 — country is the finest granularity that exists here.
+  country      String?
+  /// A-2 — "Why do you choose peace?", 280 characters, any language.
+  message      String?
+  locale       String?
+  mediaId      String?
+  media        MediaAsset?      @relation(fields: [mediaId], references: [id], onDelete: SetNull)
+  displayMode  VoiceDisplayMode @default(FIRST_NAME)
+  status       ContentStatus    @default(PENDING)
+  /// A-9 — one-click withdrawal, no account needed. Stored hashed.
+  withdrawalTokenHash String    @unique
+  /// A-8 — hashed, retained 7 days (S-7), for duplicate and abuse detection only.
+  ipHash       String?
+  ipHashExpiry DateTime?
+  /// A-8 — set only if the person asked for their Voice to be attributable.
+  verifiedAt   DateTime?
+  publishedAt  DateTime?
+  withdrawnAt  DateTime?
+  createdAt    DateTime         @default(now())
+
+  @@index([status, createdAt])
+  @@index([ipHash])
+  @@map("voices")
+}
+
+/// A-4 / NFR "counter served from cache, not a live aggregate query".
+/// A single row holding the global total. There is intentionally no
+/// (country, count) or (group, count) table anywhere in this schema: the
+/// absence of that table is what makes a scoreboard impossible to build.
+model VoiceCounter {
+  id                    Int      @id @default(1)
+  total                 Int      @default(0)
+  countriesRepresented  Int      @default(0)
+  updatedAt             DateTime @updatedAt
+
+  @@map("voice_counter")
+}
+
+/// Supports `countriesRepresented` (a breadth measure) without ever storing a
+/// per-country total. Presence only — the row says "at least one voice exists
+/// from here", and carries no number that could be compared against another.
+model CountryPresence {
+  country   String   @id
+  firstSeen DateTime @default(now())
+
+  @@map("country_presence")
+}

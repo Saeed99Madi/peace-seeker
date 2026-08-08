@@ -1,0 +1,53 @@
+{
+  "circles": {
+    "title": "Circles",
+    "intro": "A circle is a place — a city, a region — or a subject: education, health, religion and science, youth, media.",
+    "types": {
+      "GEOGRAPHIC": "Place",
+      "THEMATIC": "Subject"
+    },
+    "join": "Join this circle",
+    "leave": "Leave this circle",
+    "stewards": "Stewards",
+    "stewardNote": "A steward coordinates a circle. It is a duty, not a rank.",
+    "create": "Start a circle",
+    "empty": "No circles yet."
+  },
+  "posts": {
+    "title": "Discussion",
+    "newDiscussion": "Write a post",
+    "newStory": "Share a story",
+    "storyNote": "Stories are read by an editor before they are published.",
+    "titleField": "Title",
+    "bodyField": "What would you like to say?",
+    "language": "Language",
+    "publish": "Publish",
+    "pending": "Your story has been sent for review.",
+    "order": "In the order it was written. There is nothing to vote on here.",
+    "replies": "{count, plural, =0 {No replies} one {# reply} other {# replies}}",
+    "reply": "Reply",
+    "withdrawnAuthor": "A member who has hidden their presence",
+    "empty": "Nothing has been written here yet."
+  },
+  "library": {
+    "title": "Library",
+    "intro": "Reading gathered around the themes of the charter.",
+    "themes": {
+      "religionAndScience": "Religion and science",
+      "justice": "Justice and non-domination",
+      "practice": "Practical peacebuilding"
+    }
+  },
+  "events": {
+    "title": "Gatherings",
+    "online": "Online",
+    "inPerson": "In person",
+    "areaNote": "The general area is shown here. The exact place is sent only to those who have confirmed they are coming.",
+    "rsvp": "I will come"
+  },
+  "translation": {
+    "show": "Show machine translation",
+    "hide": "Show the original",
+    "label": "Machine translation — the original is above and is what the writer said."
+  }
+}

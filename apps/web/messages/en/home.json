@@ -1,0 +1,55 @@
+{
+  "eyebrow": "Peace Everywhere Foundation",
+  "mark": {
+    "alt": "Two equal circles, and where they overlap a leaf grows",
+    "caption": "Two circles of the same size. Neither contains the other. What grows is what they share."
+  },
+  "vision": {
+    "eyebrow": "The Founding Vision",
+    "title": "Seven things this is built on",
+    "cta": "Read the whole vision"
+  },
+  "symmetry": {
+    "eyebrow": "How the Path works",
+    "title": "Whatever one party gets, the other gets.",
+    "body": "When two people bring a problem here, the platform gives them the same instrument. Not similar — the same. These are the terms, and they are written once and applied to both.",
+    "party": "Each party",
+    "rights": {
+      "words": "The same limit on what you may write",
+      "window": "The same time to answer",
+      "statements": "One statement each, at every stage",
+      "visibility": "Neither sees how long the other took",
+      "withdraw": "Either may stop, at any point, with no penalty",
+      "facilitator": "Either may change facilitator once, no reason asked"
+    },
+    "caption": "Both panels are generated from one list by one component, so they cannot drift apart: the terms are written once and applied to both. Neither is \"the first party\" — in a real case the platform gives each side a throwaway label chosen at random, so no fixed order exists anywhere, not even in the database."
+  },
+  "wall": {
+    "eyebrow": "The Wall of Voices",
+    "cta": "See every voice"
+  },
+  "join": {
+    "eyebrow": "Membership",
+    "title": "The whole requirement is that you introduce yourself.",
+    "body": "Not your religion, not your nationality, not which side you are from. We do not ask, and there is nowhere in this platform to put the answer.",
+    "cta": "Become a member",
+    "secondary": "What we never ask"
+  },
+  "photos": {
+    "olive": {
+      "alt": "An olive branch, one ripe olive among the leaves"
+    },
+    "earth": {
+      "alt": "The earth seen from orbit, its atmosphere lit along the horizon"
+    },
+    "reach": {
+      "alt": "Two people reaching towards one another, hands almost touching"
+    },
+    "offer": {
+      "alt": "Two open, cupped hands held out"
+    }
+  },
+  "oneCountry": {
+    "eyebrow": "One country"
+  }
+}

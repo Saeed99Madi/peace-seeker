@@ -1,0 +1,53 @@
+{
+  "conduct": {
+    "title": "Code of Conduct",
+    "intro": "These rules come from the charter, and they are applied the same way to everyone, whoever they are and whichever side they are thought to come from.",
+    "rules": {
+      "dehumanization": "No dehumanization. No people described as less than human, whatever has been done in their name.",
+      "incitement": "No incitement to violence against anyone.",
+      "glorification": "No glorification of violence, and no celebration of harm done to anyone.",
+      "harassment": "No harassment of a member, here or elsewhere.",
+      "doxxing": "No publishing of anyone's identity, location or contact details. On this platform that can cost a life.",
+      "recruitment": "No recruitment for armed action of any kind.",
+      "denial": "No denial of documented atrocities against any people."
+    },
+    "protected": {
+      "title": "What is protected here",
+      "body": "Criticism of governments, of policies, of armies and of institutions is protected speech on this platform, in every direction. Attacks on human beings are not. That distinction is the whole line, and it is held equally for everyone."
+    },
+    "symmetry": {
+      "title": "How moderation works",
+      "body": "The same rule, applied identically, regardless of who is speaking. Every decision records which rule was applied and is reviewable. The team that makes them is deliberately plural. Every member may appeal every decision about them, and an appeal is never reviewed by the person who made the original decision."
+    }
+  },
+  "safety": {
+    "title": "Your safety",
+    "intro": "Being visibly associated with peace work across a conflict line can carry real risk. Here is exactly what this platform knows about you, and what you can do about it.",
+    "held": {
+      "title": "What we hold",
+      "body": "The name you chose, which need not be your real one. Your email address, kept as a one-way hash for lookups. Your country, only if you gave it. Whatever you wrote. That is all."
+    },
+    "never": {
+      "title": "What we never hold",
+      "body": "Your religion, sect, ethnicity, nationality of origin, politics or side. Any location finer than a country. Photographs still carrying the place and time they were taken — that data is stripped from every upload before it is stored, and an upload we cannot strip is refused rather than kept."
+    },
+    "controls": {
+      "title": "What you can do at any moment",
+      "hide": "Hide your presence: your profile and everything attributed to you becomes private at once. Nothing is deleted, and you can undo it.",
+      "withdraw": "Withdraw a voice: one click, from the link sent when you added it. No account, no sign-in, no reason.",
+      "delete": "Delete your account: everything attributed to you is removed within 30 days and backups are purged on the normal rotation. We write to you when it is done."
+    },
+    "limits": {
+      "title": "What we cannot do",
+      "body": "We cannot protect you from someone who is watching your device or your connection. We cannot stop someone who already knows you from recognising your words. And we are not an emergency service — if you are in danger, please reach the people who can actually come."
+    }
+  },
+  "transparency": {
+    "title": "Transparency",
+    "hosting": "The platform is hosted in the European Union, under law that constrains what any authority may demand and obliges us to tell you when something goes wrong.",
+    "requests": "If a government asks us for data about a member, we require lawful process, we narrow what is produced to what the process actually compels, and we tell the member unless we are forbidden by law from doing so. We publish the number of requests received and the number complied with.",
+    "noTrackers": "There are no advertising pixels, no third-party analytics and no social-media scripts on any page of this site. Nothing here reports your visit to anyone else.",
+    "logs": "Server logs keep a hashed form of your address for seven days, to stop abuse, and nothing else.",
+    "report": "Transparency report"
+  }
+}

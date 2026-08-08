@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    // Kept inside dist so `deleteOutDir` clears it with the output. Left at its
+    // default (a sibling of this file) it survives the wipe, tsc concludes the
+    // build is up to date, and `nest start` boots against an empty dist.
+    "tsBuildInfoFile": "dist/.tsbuildinfo"
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist", "test", "prisma", "**/*.spec.ts"]
+}

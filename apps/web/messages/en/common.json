@@ -1,0 +1,55 @@
+{
+  "brand": {
+    "name": "Peace Seekers",
+    "foundation": "Peace Everywhere Foundation",
+    "tagline": "Peace is the lifting of injustice."
+  },
+  "nav": {
+    "home": "Home",
+    "charter": "The Founding Vision",
+    "voices": "Wall of Voices",
+    "addVoice": "Add your voice",
+    "join": "Become a member",
+    "circles": "Circles",
+    "members": "Members",
+    "path": "The Path",
+    "conduct": "Code of Conduct",
+    "safety": "Your safety",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "menu": "Menu",
+    "skipToContent": "Skip to main content"
+  },
+  "language": {
+    "label": "Language",
+    "change": "Change language"
+  },
+  "actions": {
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "back": "Back",
+    "continue": "Continue",
+    "learnMore": "Learn more",
+    "share": "Share",
+    "withdraw": "Withdraw",
+    "loadMore": "Show more"
+  },
+  "footer": {
+    "notLegal": "This platform is not a legal, arbitration or judicial service, and issues no binding rulings. It is not a substitute for legal protection or emergency services.",
+    "noTracking": "No advertising, no trackers, no analytics that identify you.",
+    "transparency": "Transparency policy",
+    "privacy": "Privacy",
+    "contact": "Contact the Foundation"
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "network": "We could not reach the server. Your work has been kept on this device.",
+    "required": "This field is required."
+  },
+  "notFound": {
+    "title": "That page is not here.",
+    "body": "The link may be old, or the address mistyped. Nothing has gone wrong with your account or your voice.",
+    "home": "Go to the home page",
+    "voices": "See the Wall of Voices"
+  }
+}

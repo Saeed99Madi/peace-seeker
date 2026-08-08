@@ -1,0 +1,44 @@
+{
+  "title": "La Vision fondatrice",
+  "subtitle": "Ce texte est la référence de toute décision prise sur cette plateforme.",
+  "peace": {
+    "heading": "La paix",
+    "definition": "La paix — son sens et son fondement sont la levée de l'injustice.",
+    "submission": "S'en remettre à la paix : ni oppresseur, ni opprimé.",
+    "basis": "Son fondement est de résoudre les problèmes entre deux parties sans que l'une se sente la plus forte, et sans que l'autre se sente lésée."
+  },
+  "vision": {
+    "heading": "La vision",
+    "creation": "Dieu a créé l'univers.",
+    "nerveCell": "La plus grande des créations de Dieu est la cellule nerveuse.",
+    "purpose": "Que veut Dieu de la création de l'univers ? L'édification de l'univers, et la paix.",
+    "religionAndScience": "La religion et la science se complètent.",
+    "humanity": "L'humanité est le but.",
+    "oneCountry": "Le monde entier est un seul pays.",
+    "shortLife": "La vie est brève, et nous ne la vivons qu'une fois — pourquoi ne pas la vivre en paix ?"
+  },
+  "membership": {
+    "heading": "L'adhésion",
+    "requirement": "Il est demandé qu'une personne se présente. Rien de plus."
+  },
+  "principles": {
+    "heading": "Comment cela devient une plateforme",
+    "symmetry": {
+      "title": "Symétrie",
+      "body": "Cette plateforme ne montrera jamais un groupe comme plus grand, plus fort ou plus nombreux qu'un autre. Il existe un seul décompte des voix pour la paix, sans aucune répartition par nation, par foi ou par camp — une répartition ferait un tableau de score, ce qui est le contraire du but. Aucun classement, aucun palmarès. Dans tout processus entre deux parties, chacune reçoit la même interface, les mêmes limites et les mêmes droits, et l'ordre dans lequel elles apparaissent est tiré au sort à chaque fois."
+    },
+    "dignity": {
+      "title": "La dignité avant l'engagement",
+      "body": "Pas de mentions j'aime, pas de nombre d'abonnés, rien qui récompense le conflit par de l'attention. Ce que vous lisez est dans l'ordre où cela a été écrit, ou dans un ordre choisi par une personne — jamais dans un ordre choisi par une machine pour vous retenir ici."
+    },
+    "safety": {
+      "title": "La sécurité d'abord",
+      "body": "Beaucoup de membres vivent sous occupation, sous surveillance, ou sous des autorités hostiles au travail de paix par-delà une frontière. Être visible ici peut comporter un risque réel. Vous pouvez participer sous le nom de votre choix, nous ne demandons jamais où vous êtes au-delà de votre pays, et vous pouvez masquer ou supprimer tout ce que vous avez écrit à tout moment."
+    },
+    "oneCountry": {
+      "title": "Un seul pays",
+      "body": "La plateforme est mondiale dès le premier jour : quatre langues au lancement, une prise en charge complète de l'écriture de droite à gauche, et aucune langue traitée comme l'originale dont les autres seraient la traduction."
+    }
+  },
+  "translationNote": "Chaque traduction de ce texte est revue par un traducteur humain. Elle n'est jamais traduite automatiquement."
+}

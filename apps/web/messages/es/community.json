@@ -1,0 +1,50 @@
+{
+  "circles": {
+    "title": "Círculos",
+    "intro": "Un círculo es un lugar — una ciudad, una región — o un tema: educación, salud, religión y ciencia, juventud, medios.",
+    "types": { "GEOGRAPHIC": "Lugar", "THEMATIC": "Tema" },
+    "join": "Unirme a este círculo",
+    "leave": "Salir de este círculo",
+    "stewards": "Coordinadores",
+    "stewardNote": "Un coordinador organiza un círculo. Es una tarea, no un rango.",
+    "create": "Abrir un círculo",
+    "empty": "Todavía no hay círculos."
+  },
+  "posts": {
+    "title": "Discusión",
+    "newDiscussion": "Escribir una entrada",
+    "newStory": "Compartir un relato",
+    "storyNote": "Los relatos los lee un editor antes de publicarse.",
+    "titleField": "Título",
+    "bodyField": "¿Qué quieres decir?",
+    "language": "Idioma",
+    "publish": "Publicar",
+    "pending": "Tu relato se ha enviado para revisión.",
+    "order": "En el orden en que se escribió. Aquí no hay nada que votar.",
+    "replies": "{count, plural, =0 {Sin respuestas} one {# respuesta} other {# respuestas}}",
+    "reply": "Responder",
+    "withdrawnAuthor": "Un miembro que ha ocultado su presencia",
+    "empty": "Aquí todavía no se ha escrito nada."
+  },
+  "library": {
+    "title": "Biblioteca",
+    "intro": "Lecturas reunidas en torno a los temas de la carta.",
+    "themes": {
+      "religionAndScience": "Religión y ciencia",
+      "justice": "Justicia y no dominación",
+      "practice": "Construcción práctica de la paz"
+    }
+  },
+  "events": {
+    "title": "Encuentros",
+    "online": "En línea",
+    "inPerson": "Presencial",
+    "areaNote": "Aquí se muestra solo la zona general. El lugar exacto se envía únicamente a quienes han confirmado que vienen.",
+    "rsvp": "Asistiré"
+  },
+  "translation": {
+    "show": "Mostrar traducción automática",
+    "hide": "Mostrar el original",
+    "label": "Traducción automática — el original está arriba, y es lo que dijo quien escribe."
+  }
+}

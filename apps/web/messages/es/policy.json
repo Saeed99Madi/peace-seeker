@@ -1,0 +1,53 @@
+{
+  "conduct": {
+    "title": "Código de conducta",
+    "intro": "Estas reglas vienen de la carta, y se aplican igual a todos, sean quienes sean y de cualquier bando del que se les crea.",
+    "rules": {
+      "dehumanization": "Nada de deshumanización. Ningún pueblo descrito como menos que humano, sea lo que sea que se haya hecho en su nombre.",
+      "incitement": "Ninguna incitación a la violencia contra nadie.",
+      "glorification": "Ninguna glorificación de la violencia, ni celebración del daño hecho a nadie.",
+      "harassment": "Ningún acoso a un miembro, aquí ni fuera de aquí.",
+      "doxxing": "Ninguna publicación de la identidad, ubicación o contacto de nadie. En esta plataforma eso puede costar una vida.",
+      "recruitment": "Ningún reclutamiento para acción armada de ningún tipo.",
+      "denial": "Ninguna negación de atrocidades documentadas contra ningún pueblo."
+    },
+    "protected": {
+      "title": "Lo que está protegido aquí",
+      "body": "La crítica a gobiernos, políticas, ejércitos e instituciones es expresión protegida en esta plataforma, en todas las direcciones. Los ataques a seres humanos no lo son. Esa distinción es toda la línea, y se sostiene igual para todos."
+    },
+    "symmetry": {
+      "title": "Cómo funciona la moderación",
+      "body": "La misma regla, aplicada de forma idéntica, hable quien hable. Cada decisión registra qué regla se aplicó y es revisable. El equipo que las toma es deliberadamente plural. Todo miembro puede apelar cualquier decisión que le afecte, y una apelación nunca la revisa quien tomó la decisión original."
+    }
+  },
+  "safety": {
+    "title": "Tu seguridad",
+    "intro": "Estar visiblemente asociado al trabajo por la paz a través de una línea de conflicto puede entrañar un riesgo real. Esto es exactamente lo que esta plataforma sabe de ti, y lo que puedes hacer al respecto.",
+    "held": {
+      "title": "Lo que guardamos",
+      "body": "El nombre que elegiste, que no tiene por qué ser el tuyo. Tu correo, guardado como una huella unidireccional. Tu país, solo si lo diste. Lo que escribiste. Nada más."
+    },
+    "never": {
+      "title": "Lo que nunca guardamos",
+      "body": "Tu religión, confesión, etnia, nacionalidad de origen, política o bando. Ninguna ubicación más precisa que un país. Ninguna fotografía que aún lleve el lugar y la hora en que se tomó — esos datos se retiran de cada archivo antes de guardarlo, y un archivo que no podemos limpiar se rechaza en lugar de conservarse."
+    },
+    "controls": {
+      "title": "Lo que puedes hacer en cualquier momento",
+      "hide": "Ocultar tu presencia: tu perfil y todo lo que se te atribuye pasa a ser privado al instante. No se borra nada, y es reversible.",
+      "withdraw": "Retirar una voz: con un clic, desde el enlace que se te envió al añadirla. Sin cuenta, sin sesión, sin dar razones.",
+      "delete": "Eliminar tu cuenta: todo lo que se te atribuye desaparece en 30 días y las copias de seguridad se purgan en la rotación habitual. Te escribimos cuando esté hecho."
+    },
+    "limits": {
+      "title": "Lo que no podemos hacer",
+      "body": "No podemos protegerte de quien vigile tu dispositivo o tu conexión. No podemos impedir que alguien que ya te conoce reconozca tus palabras. Y no somos un servicio de emergencia — si estás en peligro, acude a quienes de verdad pueden acudir."
+    }
+  },
+  "transparency": {
+    "title": "Transparencia",
+    "hosting": "La plataforma se aloja en la Unión Europea, bajo una ley que limita lo que cualquier autoridad puede exigir y nos obliga a avisarte si algo va mal.",
+    "requests": "Si un gobierno nos pide datos sobre un miembro, exigimos un procedimiento legal, reducimos lo que se entrega a lo que ese procedimiento realmente obliga, y avisamos al miembro salvo que la ley nos lo prohíba. Publicamos cuántas solicitudes recibimos y a cuántas se atendió.",
+    "noTrackers": "No hay píxeles publicitarios, ni analíticas de terceros, ni scripts de redes sociales en ninguna página de este sitio. Nada aquí informa a nadie de tu visita.",
+    "logs": "Los registros del servidor guardan una huella de tu dirección durante siete días, para frenar abusos, y nada más.",
+    "report": "Informe de transparencia"
+  }
+}

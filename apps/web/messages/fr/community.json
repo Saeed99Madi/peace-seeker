@@ -1,0 +1,50 @@
+{
+  "circles": {
+    "title": "Cercles",
+    "intro": "Un cercle est un lieu — une ville, une région — ou un sujet : éducation, santé, religion et science, jeunesse, médias.",
+    "types": { "GEOGRAPHIC": "Lieu", "THEMATIC": "Sujet" },
+    "join": "Rejoindre ce cercle",
+    "leave": "Quitter ce cercle",
+    "stewards": "Coordinateurs",
+    "stewardNote": "Un coordinateur anime un cercle. C'est une charge, pas un rang.",
+    "create": "Ouvrir un cercle",
+    "empty": "Aucun cercle pour l'instant."
+  },
+  "posts": {
+    "title": "Discussion",
+    "newDiscussion": "Écrire un message",
+    "newStory": "Partager un récit",
+    "storyNote": "Les récits sont lus par un éditeur avant publication.",
+    "titleField": "Titre",
+    "bodyField": "Que souhaitez-vous dire ?",
+    "language": "Langue",
+    "publish": "Publier",
+    "pending": "Votre récit a été envoyé pour relecture.",
+    "order": "Dans l'ordre où cela a été écrit. Il n'y a rien à voter ici.",
+    "replies": "{count, plural, =0 {Aucune réponse} one {# réponse} other {# réponses}}",
+    "reply": "Répondre",
+    "withdrawnAuthor": "Un membre qui a masqué sa présence",
+    "empty": "Rien n'a encore été écrit ici."
+  },
+  "library": {
+    "title": "Bibliothèque",
+    "intro": "Des lectures rassemblées autour des thèmes de la charte.",
+    "themes": {
+      "religionAndScience": "Religion et science",
+      "justice": "Justice et non-domination",
+      "practice": "Construction pratique de la paix"
+    }
+  },
+  "events": {
+    "title": "Rencontres",
+    "online": "En ligne",
+    "inPerson": "En personne",
+    "areaNote": "Seule la zone générale est affichée ici. Le lieu exact n'est envoyé qu'à ceux qui ont confirmé leur venue.",
+    "rsvp": "Je viendrai"
+  },
+  "translation": {
+    "show": "Afficher la traduction automatique",
+    "hide": "Afficher l'original",
+    "label": "Traduction automatique — l'original est au-dessus, et c'est ce que la personne a dit."
+  }
+}

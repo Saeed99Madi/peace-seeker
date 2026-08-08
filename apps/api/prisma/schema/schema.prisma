@@ -1,0 +1,128 @@
+// Peace Seekers — datasource, generator and shared enumerations.
+// The schema is split across several files (prismaSchemaFolder) so that no
+// single file exceeds the project's 200-line ceiling.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// A-6 — how a Voice is attributed publicly.
+enum VoiceDisplayMode {
+  NAME
+  FIRST_NAME
+  ANONYMOUS
+}
+
+/// E-1 — every publishable artefact shares one moderation lifecycle.
+enum ContentStatus {
+  PENDING
+  PUBLISHED
+  HIDDEN
+  WITHDRAWN
+  REJECTED
+}
+
+/// §4 — roles are additive; they are never rendered as a hierarchy.
+enum UserRole {
+  MEMBER
+  CIRCLE_STEWARD
+  FACILITATOR
+  MODERATOR
+  ADMINISTRATOR
+}
+
+enum AccountStatus {
+  ACTIVE
+  HIDDEN
+  SUSPENDED
+  DELETION_PENDING
+}
+
+/// B-5 — default is MEMBERS_ONLY.
+enum ProfileVisibility {
+  PUBLIC
+  MEMBERS_ONLY
+  PRIVATE
+}
+
+enum MediaKind {
+  IMAGE
+  AUDIO
+  VIDEO
+}
+
+enum CircleType {
+  GEOGRAPHIC
+  THEMATIC
+}
+
+enum PostType {
+  DISCUSSION
+  STORY
+}
+
+enum EventMode {
+  ONLINE
+  IN_PERSON
+}
+
+/// D-4 — the seven stages, in order.
+enum CaseStage {
+  CONSENT
+  SITUATION
+  UNDERSTANDING
+  INTERESTS
+  OPTIONS
+  AGREEMENT
+  FOLLOW_UP
+}
+
+enum CaseStatus {
+  AWAITING_CONSENT
+  ACTIVE
+  WITHDRAWN
+  CLOSED
+  ROUTED_OUT
+}
+
+/// D-8 — matters that must be routed off the platform.
+enum OutOfScopeReason {
+  CRIMINAL
+  DOMESTIC_VIOLENCE
+  CHILD_SAFETY
+  THREAT_OF_HARM
+}
+
+enum ReportReason {
+  DEHUMANIZATION
+  INCITEMENT
+  GLORIFICATION_OF_VIOLENCE
+  HARASSMENT
+  DOXXING
+  ARMED_RECRUITMENT
+  ATROCITY_DENIAL
+  SPAM
+  OTHER
+}
+
+enum ReportTargetType {
+  VOICE
+  POST
+  MEMBER
+  CIRCLE
+  MESSAGE
+  EVENT
+}
+
+enum ModerationAction {
+  APPROVE
+  HIDE
+  REJECT
+  SUSPEND_ACCOUNT
+  DISMISS_REPORT
+}

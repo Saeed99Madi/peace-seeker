@@ -1,0 +1,61 @@
+{
+  "title": "The Path",
+  "subtitle": "The shortest paths to peace.",
+  "intro": "A way for two people to work through a problem so that neither ends up feeling stronger, and neither ends up feeling wronged.",
+  "notLegal": "This is not a legal service, an arbitration, or a court. Nothing decided here binds anyone. If you are in danger, or a crime has been committed, or a child is at risk, please use the services listed below instead — they can do what this platform cannot.",
+  "symmetry": {
+    "title": "What is the same for both of you",
+    "body": "The same word limit. The same time to answer. The same number of statements. The same view of the case. Neither of you can see how long the other took or how many times they rewrote it, and the order you appear in is decided afresh every time the page is opened."
+  },
+  "facilitator": {
+    "title": "The facilitator",
+    "body": "A trained neutral who guides the conversation. They cannot decide anything, cannot rule for either of you, and cannot be chosen by one of you alone. Either of you may ask for a different facilitator once, without giving a reason."
+  },
+  "stages": {
+    "CONSENT": "Agreement to begin, and the ground rules",
+    "SITUATION": "Each of you says what happened",
+    "UNDERSTANDING": "Each of you says, in your own words, what you understood of the other",
+    "INTERESTS": "What each of you actually needs, underneath the positions",
+    "OPTIONS": "Possibilities, found together",
+    "AGREEMENT": "A written understanding",
+    "FOLLOW_UP": "Checking in after 30 days, and again after 90"
+  },
+  "open": {
+    "title": "Bring a problem forward",
+    "situation": "What has happened?",
+    "situationHelp": "Describe the situation, not the person.",
+    "hoped": "What do you hope for?",
+    "offer": "What are you willing to offer?",
+    "invite": "The other person's email",
+    "inviteHelp": "They will be invited. Nothing you have written is shared with them until they agree to take part, and a facilitator has read it first.",
+    "acknowledge": "I understand this is not a legal service, and that it is not for matters of crime, violence or danger.",
+    "submit": "Send the invitation"
+  },
+  "invitation": {
+    "title": "You have been invited",
+    "body": "Someone has asked to work through a difficulty with you, with a neutral facilitator. You may say no, and you may stop at any point later. Nothing is made public either way.",
+    "accept": "I agree to take part",
+    "decline": "No, thank you"
+  },
+  "statement": {
+    "label": "Your statement",
+    "limit": "Up to {max} words — the same limit for both of you.",
+    "wordCount": "{count} of {max} words",
+    "waiting": "Your statement has been received. You will see the other side's words once they have written theirs and the facilitator has read both.",
+    "submit": "Submit"
+  },
+  "routedOut": {
+    "title": "This needs more than we can offer",
+    "body": "From what you have written, this is a matter for people trained and empowered to protect you. That is not a judgement about you or about what happened — it is that mediation is the wrong tool here, and using it could make you less safe.",
+    "findHelp": "Find help near you"
+  },
+  "withdraw": {
+    "title": "Stop taking part",
+    "body": "You may stop at any stage. There is no penalty, nothing is held against you, and no public record is made.",
+    "confirm": "Stop taking part"
+  },
+  "fairness": {
+    "question": "Did this feel fair to you?",
+    "note": "Both of you are asked the same question. The difference between your two answers is the measure the Foundation watches most closely — if it is large, this platform has failed at what it set out to do."
+  }
+}

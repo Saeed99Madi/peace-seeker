@@ -1,0 +1,56 @@
+{
+  "counter": {
+    "label": "{count, plural, =0 {No voices yet} one {# voice for peace} other {# voices for peace}}",
+    "countries": "{count, plural, =0 {from nowhere yet} one {from # country} other {from # countries}}",
+    "note": "One number, for everyone. We do not count by nation, faith or side."
+  },
+  "hero": {
+    "title": "Choose peace, and be counted.",
+    "body": "Anyone may add their voice — from any country, any faith, any side of any conflict. No account is needed, and it takes less than a minute.",
+    "cta": "Add your voice"
+  },
+  "wall": {
+    "title": "The Wall of Voices",
+    "subtitle": "Shown in a different order for every reader, so that no voice is placed above another.",
+    "empty": "No voices have been published yet. Yours can be the first."
+  },
+  "attribution": {
+    "anonymous": "A voice",
+    "fromCountry": "A voice from {country}"
+  },
+  "form": {
+    "title": "Add your voice",
+    "intro": "You are saying one thing: that you choose peace and peaceful coexistence.",
+    "name": "What shall we call you?",
+    "nameHelp": "A first name, or any name you choose. It does not have to be your legal name.",
+    "country": "Country (optional)",
+    "countryHelp": "Country only. We never ask for a city or an address, and we never record one.",
+    "message": "Why do you choose peace?",
+    "messageHelp": "Optional, up to {max} characters, in any language.",
+    "displayMode": {
+      "label": "How should your voice appear?",
+      "NAME": "With the name I gave",
+      "FIRST_NAME": "First name only",
+      "ANONYMOUS": "Anonymously"
+    },
+    "email": "Email (optional)",
+    "emailHelp": "Only used to send you a link that removes your voice later, in one click. It is never shown and never shared.",
+    "submit": "Add my voice",
+    "submitting": "Adding your voice…",
+    "success": "Your voice has been added. Thank you.",
+    "successWithEmail": "Your voice has been added. We have sent you a link that removes it at any time, in one click.",
+    "offline": "You are offline. Your voice is saved on this device and will be sent as soon as you are connected.",
+    "privacyNote": "We do not store your location, and we keep no record that can tie this to you unless you ask us to."
+  },
+  "withdraw": {
+    "title": "Withdraw your voice",
+    "body": "This removes your voice from the wall and from the count. It cannot be undone, and no reason is required.",
+    "confirm": "Withdraw my voice",
+    "success": "Your voice has been withdrawn.",
+    "invalid": "This link is no longer valid. It may already have been used."
+  },
+  "share": {
+    "title": "Share your voice",
+    "note": "The card carries no location and no full name unless you chose to show them."
+  }
+}

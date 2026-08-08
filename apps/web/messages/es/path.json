@@ -1,0 +1,61 @@
+{
+  "title": "El Camino",
+  "subtitle": "Los caminos más cortos hacia la paz.",
+  "intro": "Una manera de que dos personas resuelvan un problema sin que una acabe sintiéndose más fuerte, ni la otra sintiéndose agraviada.",
+  "notLegal": "Esto no es un servicio jurídico, ni un arbitraje, ni un tribunal. Nada de lo que se decide aquí obliga a nadie. Si estás en peligro, si se ha cometido un delito, o si un menor está en riesgo, acude a los servicios indicados más abajo — ellos pueden lo que esta plataforma no puede.",
+  "symmetry": {
+    "title": "Lo que es igual para los dos",
+    "body": "El mismo límite de palabras. El mismo plazo para responder. El mismo número de declaraciones. La misma vista del caso. Ninguno de los dos ve cuánto tardó el otro ni cuántas veces lo reescribió, y el orden en que aparecéis se sortea de nuevo cada vez que se abre la página."
+  },
+  "facilitator": {
+    "title": "El facilitador",
+    "body": "Una persona neutral y formada que acompaña la conversación. No puede decidir nada, no puede fallar a favor de ninguno de los dos, y no puede ser elegida por uno solo. Cualquiera de los dos puede pedir otro facilitador una vez, sin dar razones."
+  },
+  "stages": {
+    "CONSENT": "El acuerdo para empezar, y las reglas del trabajo",
+    "SITUATION": "Cada uno cuenta lo que pasó",
+    "UNDERSTANDING": "Cada uno dice, con sus palabras, qué entendió del otro",
+    "INTERESTS": "Lo que cada uno necesita de verdad, bajo las posiciones",
+    "OPTIONS": "Posibilidades, encontradas juntos",
+    "AGREEMENT": "Un entendimiento escrito",
+    "FOLLOW_UP": "Una revisión a los 30 días, y otra a los 90"
+  },
+  "open": {
+    "title": "Plantear un problema",
+    "situation": "¿Qué ha pasado?",
+    "situationHelp": "Describe la situación, no a la persona.",
+    "hoped": "¿Qué esperas?",
+    "offer": "¿Qué estás dispuesto a ofrecer?",
+    "invite": "El correo de la otra persona",
+    "inviteHelp": "Recibirá una invitación. Nada de lo que has escrito se le comparte hasta que acepte participar, y un facilitador lo haya leído antes.",
+    "acknowledge": "Entiendo que esto no es un servicio jurídico, y que no es para asuntos de delito, violencia o peligro.",
+    "submit": "Enviar la invitación"
+  },
+  "invitation": {
+    "title": "Te han invitado",
+    "body": "Alguien ha pedido resolver una dificultad contigo, con un facilitador neutral. Puedes decir que no, y puedes parar en cualquier momento después. No se hace público nada en ninguno de los dos casos.",
+    "accept": "Acepto participar",
+    "decline": "No, gracias"
+  },
+  "statement": {
+    "label": "Tu declaración",
+    "limit": "Hasta {max} palabras — el mismo límite para los dos.",
+    "wordCount": "{count} de {max} palabras",
+    "waiting": "Tu declaración ha llegado. Verás las palabras de la otra parte cuando haya escrito las suyas y el facilitador haya leído ambas.",
+    "submit": "Enviar"
+  },
+  "routedOut": {
+    "title": "Esto necesita más de lo que podemos ofrecer",
+    "body": "Por lo que has escrito, este es un asunto para personas formadas y facultadas para protegerte. No es un juicio sobre ti ni sobre lo que pasó — es que la mediación es aquí la herramienta equivocada, y usarla podría dejarte menos seguro.",
+    "findHelp": "Encontrar ayuda cerca de ti"
+  },
+  "withdraw": {
+    "title": "Dejar de participar",
+    "body": "Puedes parar en cualquier etapa. No hay penalización, no se te reprocha nada, y no se hace ningún registro público.",
+    "confirm": "Dejar de participar"
+  },
+  "fairness": {
+    "question": "¿Te ha parecido justo?",
+    "note": "A los dos se os hace la misma pregunta. La diferencia entre vuestras dos respuestas es la medida que la Fundación vigila con más atención — si es grande, esta plataforma ha fracasado en aquello para lo que nació."
+  }
+}

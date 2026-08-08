@@ -1,0 +1,71 @@
+# Production topology. Secrets come from the environment or a secret store —
+# never from this file, and never from a committed .env.
+#
+# S-8: this must be deployed in a jurisdiction with strong data-protection law
+# and a record of resisting overbroad disclosure demands. The image is
+# portable; the region is the decision that matters.
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 4000
+      DATABASE_URL: ${DATABASE_URL:?set DATABASE_URL}
+      REDIS_URL: ${REDIS_URL:?set REDIS_URL}
+      WEB_ORIGIN: ${WEB_ORIGIN:?set WEB_ORIGIN}
+      API_PUBLIC_URL: ${API_PUBLIC_URL:?set API_PUBLIC_URL}
+      TRUSTED_PROXY_HOPS: ${TRUSTED_PROXY_HOPS:-1}
+      EMAIL_HASH_PEPPER: ${EMAIL_HASH_PEPPER:?set EMAIL_HASH_PEPPER}
+      IP_HASH_PEPPER: ${IP_HASH_PEPPER:?set IP_HASH_PEPPER}
+      SESSION_SECRET: ${SESSION_SECRET:?set SESSION_SECRET}
+      MAIL_TRANSPORT: smtp
+      MAIL_FROM: ${MAIL_FROM:?set MAIL_FROM}
+      SMTP_URL: ${SMTP_URL:?set SMTP_URL}
+      STORAGE_DRIVER: s3
+      S3_ENDPOINT: ${S3_ENDPOINT:?set S3_ENDPOINT}
+      S3_REGION: ${S3_REGION:-eu-central-1}
+      S3_BUCKET: ${S3_BUCKET:-peace-media}
+      S3_ACCESS_KEY: ${S3_ACCESS_KEY:?set S3_ACCESS_KEY}
+      S3_SECRET_KEY: ${S3_SECRET_KEY:?set S3_SECRET_KEY}
+    ports:
+      - '4000:4000'
+    read_only: true
+    tmpfs:
+      # The metadata stripper writes a short-lived temp file per upload; nothing
+      # else in the container needs a writable filesystem.
+      - /tmp:size=256m
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    deploy:
+      resources:
+        limits:
+          memory: 768M
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:?set NEXT_PUBLIC_API_URL}
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+    ports:
+      - '3000:3000'
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    depends_on:
+      - api
+    deploy:
+      resources:
+        limits:
+          memory: 512M

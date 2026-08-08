@@ -1,0 +1,55 @@
+{
+  "eyebrow": "Fundación Paz en Todas Partes",
+  "mark": {
+    "alt": "Dos círculos iguales, y donde se superponen crece una hoja",
+    "caption": "Dos círculos del mismo tamaño. Ninguno contiene al otro. Lo que crece es lo que comparten."
+  },
+  "vision": {
+    "eyebrow": "La Visión fundacional",
+    "title": "Siete cosas sobre las que esto se levanta",
+    "cta": "Leer la visión entera"
+  },
+  "symmetry": {
+    "eyebrow": "Cómo funciona el Camino",
+    "title": "Lo que recibe una parte, lo recibe la otra.",
+    "body": "Cuando dos personas traen aquí un problema, la plataforma les da el mismo instrumento. No parecido — el mismo. Estos son los términos, escritos una sola vez y aplicados a ambas.",
+    "party": "Cada parte",
+    "rights": {
+      "words": "El mismo límite sobre lo que puedes escribir",
+      "window": "El mismo plazo para responder",
+      "statements": "Una declaración cada uno, en cada etapa",
+      "visibility": "Ninguno ve cuánto tardó el otro",
+      "withdraw": "Cualquiera puede parar, en cualquier momento, sin penalización",
+      "facilitator": "Cualquiera puede cambiar de facilitador una vez, sin dar razones"
+    },
+    "caption": "Ambos paneles se generan desde una sola lista con un solo componente, así que no pueden divergir: los términos se escriben una vez y se aplican a las dos partes. Ninguno es «la primera parte» — en un caso real la plataforma da a cada lado una etiqueta provisional elegida al azar, de modo que no existe un orden fijo en ningún sitio, ni siquiera en la base de datos."
+  },
+  "wall": {
+    "eyebrow": "El Muro de las voces",
+    "cta": "Ver todas las voces"
+  },
+  "join": {
+    "eyebrow": "Membresía",
+    "title": "Todo lo que se pide es que te presentes.",
+    "body": "Ni tu religión, ni tu nacionalidad, ni de qué bando eres. No lo preguntamos, y no hay lugar en esta plataforma donde poner la respuesta.",
+    "cta": "Hazte miembro",
+    "secondary": "Lo que nunca preguntamos"
+  },
+  "photos": {
+    "olive": {
+      "alt": "Una rama de olivo, una aceituna madura entre las hojas"
+    },
+    "earth": {
+      "alt": "La Tierra vista desde la órbita, su atmósfera iluminada en el horizonte"
+    },
+    "reach": {
+      "alt": "Dos personas tendiéndose la mano, casi rozándose"
+    },
+    "offer": {
+      "alt": "Dos manos abiertas, extendidas en cuenco"
+    }
+  },
+  "oneCountry": {
+    "eyebrow": "Un solo país"
+  }
+}

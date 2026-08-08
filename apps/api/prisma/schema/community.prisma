@@ -1,0 +1,148 @@
+// Module C — The Community. No score, vote, like or follower column exists
+// anywhere in this file; ordering is chronological or editorial only (§3.2).
+
+model Circle {
+  id          String        @id @default(uuid())
+  name        String
+  type        CircleType
+  description String
+  locale      String?
+  /// C-5/S-3 — a general area, never an address.
+  generalArea String?
+  status      ContentStatus @default(PUBLISHED)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  members CircleMembership[]
+  posts   Post[]
+  events  Event[]
+
+  @@index([type])
+  @@map("circles")
+}
+
+model CircleMembership {
+  id       String   @id @default(uuid())
+  circleId String
+  circle   Circle   @relation(fields: [circleId], references: [id], onDelete: Cascade)
+  userId   String
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  /// "STEWARD" or "MEMBER" — a coordination duty, not a rank.
+  role     String   @default("MEMBER")
+  joinedAt DateTime @default(now())
+
+  @@unique([circleId, userId])
+  @@index([userId])
+  @@map("circle_memberships")
+}
+
+model Post {
+  id        String        @id @default(uuid())
+  type      PostType
+  authorId  String
+  author    User          @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  circleId  String?
+  circle    Circle?       @relation(fields: [circleId], references: [id], onDelete: Cascade)
+  parentId  String?
+  parent    Post?         @relation("PostReplies", fields: [parentId], references: [id], onDelete: Cascade)
+  replies   Post[]        @relation("PostReplies")
+  title     String
+  body      String
+  language  String
+  /// C-3 — stories are editorially reviewed before publication.
+  status    ContentStatus @default(PUBLISHED)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+
+  @@index([circleId, createdAt])
+  @@index([type, status, createdAt])
+  @@map("posts")
+}
+
+model Event {
+  id          String    @id @default(uuid())
+  circleId    String?
+  circle      Circle?   @relation(fields: [circleId], references: [id], onDelete: Cascade)
+  title       String
+  description String
+  startsAt    DateTime
+  endsAt      DateTime?
+  mode        EventMode
+  /// C-5 — the public listing shows this…
+  generalArea String?
+  /// …and this is released to confirmed attendees only.
+  exactLocation String?
+  onlineUrl   String?
+  createdAt   DateTime  @default(now())
+
+  rsvps EventRsvp[]
+
+  @@index([startsAt])
+  @@map("events")
+}
+
+model EventRsvp {
+  eventId     String
+  event       Event    @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  confirmedAt DateTime @default(now())
+
+  @@id([eventId, userId])
+  @@map("event_rsvps")
+}
+
+model DirectMessage {
+  id          String    @id @default(uuid())
+  senderId    String
+  sender      User      @relation("MessageSender", fields: [senderId], references: [id], onDelete: Cascade)
+  recipientId String
+  recipient   User      @relation("MessageRecipient", fields: [recipientId], references: [id], onDelete: Cascade)
+  body        String
+  readAt      DateTime?
+  createdAt   DateTime  @default(now())
+
+  @@index([recipientId, createdAt])
+  @@map("direct_messages")
+}
+
+model Block {
+  blockerId String
+  blocker   User     @relation("Blocker", fields: [blockerId], references: [id], onDelete: Cascade)
+  blockedId String
+  blocked   User     @relation("Blocked", fields: [blockedId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@id([blockerId, blockedId])
+  @@map("blocks")
+}
+
+/// C-4 — the Library. Curated, editorial, never algorithmic.
+model LibraryItem {
+  id          String        @id @default(uuid())
+  title       String
+  summary     String
+  theme       String
+  language    String
+  format      String
+  url         String?
+  body        String?
+  status      ContentStatus @default(PENDING)
+  publishedAt DateTime?
+  createdAt   DateTime      @default(now())
+
+  @@index([theme, language])
+  @@map("library_items")
+}
+
+/// C-7 — Foundation announcements.
+model Announcement {
+  id          String   @id @default(uuid())
+  title       String
+  body        String
+  language    String
+  publishedAt DateTime @default(now())
+
+  @@index([publishedAt])
+  @@map("announcements")
+}

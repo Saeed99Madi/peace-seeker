@@ -1,0 +1,61 @@
+{
+  "title": "Le Chemin",
+  "subtitle": "Les chemins les plus courts vers la paix.",
+  "intro": "Une manière, pour deux personnes, de traiter un problème sans que l'une finisse par se sentir la plus forte, ni l'autre par se sentir lésée.",
+  "notLegal": "Ceci n'est ni un service juridique, ni un arbitrage, ni un tribunal. Rien de ce qui est décidé ici n'engage quiconque. Si vous êtes en danger, si un crime a été commis, ou si un enfant est en risque, adressez-vous plutôt aux services indiqués ci-dessous — ils peuvent ce que cette plateforme ne peut pas.",
+  "symmetry": {
+    "title": "Ce qui est identique pour vous deux",
+    "body": "La même limite de mots. Le même délai pour répondre. Le même nombre de déclarations. La même vue du dossier. Aucun de vous ne voit combien de temps l'autre a pris ni combien de fois il a réécrit, et l'ordre dans lequel vous apparaissez est retiré au sort à chaque ouverture de la page."
+  },
+  "facilitator": {
+    "title": "Le facilitateur",
+    "body": "Un tiers neutre et formé qui accompagne la conversation. Il ne peut rien décider, ne peut trancher en faveur d'aucun de vous, et ne peut être choisi par l'un de vous seul. Chacun de vous peut demander un autre facilitateur une fois, sans donner de raison."
+  },
+  "stages": {
+    "CONSENT": "L'accord pour commencer, et les règles du travail",
+    "SITUATION": "Chacun dit ce qui s'est passé",
+    "UNDERSTANDING": "Chacun dit, avec ses mots, ce qu'il a compris de l'autre",
+    "INTERESTS": "Ce dont chacun a réellement besoin, sous les positions",
+    "OPTIONS": "Des possibilités, trouvées ensemble",
+    "AGREEMENT": "Une entente écrite",
+    "FOLLOW_UP": "Un point après 30 jours, puis après 90"
+  },
+  "open": {
+    "title": "Soumettre un problème",
+    "situation": "Que s'est-il passé ?",
+    "situationHelp": "Décrivez la situation, pas la personne.",
+    "hoped": "Qu'espérez-vous ?",
+    "offer": "Qu'êtes-vous prêt à offrir ?",
+    "invite": "Le courriel de l'autre personne",
+    "inviteHelp": "Elle recevra une invitation. Rien de ce que vous avez écrit ne lui est transmis avant qu'elle accepte de participer, et qu'un facilitateur l'ait lu.",
+    "acknowledge": "Je comprends que ceci n'est pas un service juridique, et que ce n'est pas pour des affaires de crime, de violence ou de danger.",
+    "submit": "Envoyer l'invitation"
+  },
+  "invitation": {
+    "title": "Vous avez été invité",
+    "body": "Quelqu'un a demandé à traiter un différend avec vous, avec un facilitateur neutre. Vous pouvez refuser, et vous pouvez arrêter à tout moment ensuite. Rien n'est rendu public dans un cas comme dans l'autre.",
+    "accept": "J'accepte de participer",
+    "decline": "Non, merci"
+  },
+  "statement": {
+    "label": "Votre déclaration",
+    "limit": "Jusqu'à {max} mots — la même limite pour vous deux.",
+    "wordCount": "{count} sur {max} mots",
+    "waiting": "Votre déclaration est arrivée. Vous verrez les mots de l'autre partie une fois qu'elle aura écrit les siens et que le facilitateur aura lu les deux.",
+    "submit": "Envoyer"
+  },
+  "routedOut": {
+    "title": "Ceci demande plus que ce que nous pouvons offrir",
+    "body": "D'après ce que vous avez écrit, ceci relève de personnes formées et habilitées à vous protéger. Ce n'est pas un jugement sur vous ni sur ce qui s'est passé — c'est que la médiation est ici le mauvais outil, et l'employer pourrait vous rendre moins en sécurité.",
+    "findHelp": "Trouver de l'aide près de chez vous"
+  },
+  "withdraw": {
+    "title": "Cesser de participer",
+    "body": "Vous pouvez arrêter à n'importe quelle étape. Aucune pénalité, rien ne vous est reproché, et aucun registre public n'est établi.",
+    "confirm": "Cesser de participer"
+  },
+  "fairness": {
+    "question": "Cela vous a-t-il semblé juste ?",
+    "note": "La même question vous est posée à tous les deux. L'écart entre vos deux réponses est la mesure que la Fondation surveille le plus attentivement — s'il est grand, cette plateforme a échoué dans ce qu'elle s'était donné pour tâche."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "counter": {
+    "label": "{count, plural, =0 {Aún no hay voces} one {# voz por la paz} other {# voces por la paz}}",
+    "countries": "{count, plural, =0 {de ningún país todavía} one {desde # país} other {desde # países}}",
+    "note": "Un solo número, para todos. No contamos por nación, fe ni bando."
+  },
+  "hero": {
+    "title": "Elige la paz, y que te cuenten.",
+    "body": "Cualquiera puede añadir su voz — de cualquier país, cualquier fe, cualquier bando de cualquier conflicto. No hace falta una cuenta, y lleva menos de un minuto.",
+    "cta": "Añade tu voz"
+  },
+  "wall": {
+    "title": "El Muro de las voces",
+    "subtitle": "Se muestra en un orden distinto para cada lector, para que ninguna voz quede por encima de otra.",
+    "empty": "Todavía no se ha publicado ninguna voz. La tuya puede ser la primera."
+  },
+  "attribution": {
+    "anonymous": "Una voz",
+    "fromCountry": "Una voz desde {country}"
+  },
+  "form": {
+    "title": "Añade tu voz",
+    "intro": "Estás diciendo una sola cosa: que eliges la paz y la convivencia pacífica.",
+    "name": "¿Cómo te llamamos?",
+    "nameHelp": "Un nombre de pila, o cualquier nombre que elijas. No tiene que ser tu nombre legal.",
+    "country": "País (opcional)",
+    "countryHelp": "Solo el país. Nunca pedimos una ciudad ni una dirección, y nunca las registramos.",
+    "message": "¿Por qué eliges la paz?",
+    "messageHelp": "Opcional, hasta {max} caracteres, en cualquier idioma.",
+    "displayMode": {
+      "label": "¿Cómo debe aparecer tu voz?",
+      "NAME": "Con el nombre que he dado",
+      "FIRST_NAME": "Solo el nombre de pila",
+      "ANONYMOUS": "De forma anónima"
+    },
+    "email": "Correo electrónico (opcional)",
+    "emailHelp": "Solo se usa para enviarte un enlace que retira tu voz más adelante, con un clic. Nunca se muestra ni se comparte.",
+    "submit": "Añadir mi voz",
+    "submitting": "Añadiendo tu voz…",
+    "success": "Tu voz ha sido añadida. Gracias.",
+    "successWithEmail": "Tu voz ha sido añadida. Te hemos enviado un enlace que la retira cuando quieras, con un clic.",
+    "offline": "Estás sin conexión. Tu voz se ha guardado en este dispositivo y se enviará en cuanto vuelvas a conectarte.",
+    "privacyNote": "No guardamos tu ubicación, y no conservamos nada que pueda vincular esto contigo, salvo que nos lo pidas."
+  },
+  "withdraw": {
+    "title": "Retirar tu voz",
+    "body": "Esto quita tu voz del muro y del recuento. No se puede deshacer, y no se pide ninguna razón.",
+    "confirm": "Retirar mi voz",
+    "success": "Tu voz ha sido retirada.",
+    "invalid": "Este enlace ya no es válido. Puede que ya se haya usado."
+  },
+  "share": {
+    "title": "Comparte tu voz",
+    "note": "La tarjeta no lleva ubicación ni nombre completo salvo que hayas elegido mostrarlos."
+  }
+}

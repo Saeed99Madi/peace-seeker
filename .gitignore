@@ -1,0 +1,30 @@
+node_modules/
+dist/
+build/
+.next/
+out/
+coverage/
+
+.env
+.env.local
+.env.*.local
+!.env.example
+
+*.log
+npm-debug.log*
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Local media/object-storage emulation
+storage/
+uploads/
+
+# TypeScript incremental build state
+*.tsbuildinfo
+
+# Next.js production build output (separate from the dev server dir)
+.next-build/
+
+# Source photographs are kept; generated variants are committed too.

@@ -1,0 +1,44 @@
+{
+  "title": "La Visión fundacional",
+  "subtitle": "Este texto es la referencia de toda decisión que se toma en esta plataforma.",
+  "peace": {
+    "heading": "La paz",
+    "definition": "La paz — su sentido y su fundamento es el levantamiento de la injusticia.",
+    "submission": "Entrega a la paz: ni opresor ni oprimido.",
+    "basis": "Su fundamento es resolver los problemas entre dos partes sin que una se sienta más fuerte, y sin que la otra se sienta agraviada."
+  },
+  "vision": {
+    "heading": "La visión",
+    "creation": "Dios creó el universo.",
+    "nerveCell": "La mayor de las creaciones de Dios es la célula nerviosa.",
+    "purpose": "¿Qué quiere Dios de la creación del universo? La edificación del universo, y la paz.",
+    "religionAndScience": "La religión y la ciencia se completan mutuamente.",
+    "humanity": "La humanidad es el fin.",
+    "oneCountry": "El mundo entero es un solo país.",
+    "shortLife": "La vida es breve, y solo se vive una vez — ¿por qué no vivirla en paz?"
+  },
+  "membership": {
+    "heading": "La membresía",
+    "requirement": "Lo que se pide es que la persona se presente. Nada más."
+  },
+  "principles": {
+    "heading": "Cómo esto se convierte en una plataforma",
+    "symmetry": {
+      "title": "Simetría",
+      "body": "Esta plataforma nunca mostrará a un grupo como mayor, más fuerte o más numeroso que otro. Hay un solo recuento de voces por la paz, y ningún desglose por nación, fe o bando — un desglose haría un marcador, que es lo contrario del propósito. No hay clasificaciones ni tablas de honor. En cualquier proceso entre dos partes, ambas reciben la misma interfaz, los mismos límites y los mismos derechos, y el orden en que aparecen se sortea cada vez."
+    },
+    "dignity": {
+      "title": "La dignidad por encima de la interacción",
+      "body": "Sin me gusta, sin número de seguidores, sin nada que premie el conflicto con atención. Lo que lees está en el orden en que se escribió, o en un orden que eligió una persona — nunca en un orden que eligió una máquina para retenerte aquí."
+    },
+    "safety": {
+      "title": "La seguridad primero",
+      "body": "Muchos miembros viven bajo ocupación, bajo vigilancia, o bajo autoridades hostiles al trabajo por la paz al otro lado de una frontera. Ser visible aquí puede entrañar un riesgo real. Puedes participar con el nombre que elijas, nunca preguntamos dónde estás más allá de tu país, y puedes ocultar o borrar todo lo que has escrito en cualquier momento."
+    },
+    "oneCountry": {
+      "title": "Un solo país",
+      "body": "La plataforma es global desde el primer día: cuatro idiomas en el lanzamiento, soporte completo de derecha a izquierda, y ningún idioma tratado como el verdadero del que los demás son traducción."
+    }
+  },
+  "translationNote": "Cada traducción de este texto la revisa un traductor humano. Nunca se traduce automáticamente."
+}

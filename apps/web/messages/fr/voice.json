@@ -1,0 +1,56 @@
+{
+  "counter": {
+    "label": "{count, plural, =0 {Aucune voix pour l'instant} one {# voix pour la paix} other {# voix pour la paix}}",
+    "countries": "{count, plural, =0 {d'aucun pays encore} one {depuis # pays} other {depuis # pays}}",
+    "note": "Un seul nombre, pour tous. Nous ne comptons ni par nation, ni par foi, ni par camp."
+  },
+  "hero": {
+    "title": "Choisissez la paix, et soyez compté.",
+    "body": "Chacun peut ajouter sa voix — de tout pays, de toute foi, de tout camp de tout conflit. Aucun compte n'est nécessaire, et cela prend moins d'une minute.",
+    "cta": "Ajouter votre voix"
+  },
+  "wall": {
+    "title": "Le Mur des voix",
+    "subtitle": "Affiché dans un ordre différent pour chaque lecteur, afin qu'aucune voix ne soit placée au-dessus d'une autre.",
+    "empty": "Aucune voix n'a encore été publiée. La vôtre peut être la première."
+  },
+  "attribution": {
+    "anonymous": "Une voix",
+    "fromCountry": "Une voix depuis {country}"
+  },
+  "form": {
+    "title": "Ajouter votre voix",
+    "intro": "Vous dites une seule chose : que vous choisissez la paix et la coexistence pacifique.",
+    "name": "Comment vous appellerons-nous ?",
+    "nameHelp": "Un prénom, ou tout nom de votre choix. Ce n'est pas nécessairement votre nom légal.",
+    "country": "Pays (facultatif)",
+    "countryHelp": "Le pays seulement. Nous ne demandons jamais de ville ni d'adresse, et n'en enregistrons jamais.",
+    "message": "Pourquoi choisissez-vous la paix ?",
+    "messageHelp": "Facultatif, jusqu'à {max} caractères, dans n'importe quelle langue.",
+    "displayMode": {
+      "label": "Comment votre voix doit-elle apparaître ?",
+      "NAME": "Avec le nom que j'ai donné",
+      "FIRST_NAME": "Prénom seulement",
+      "ANONYMOUS": "Anonymement"
+    },
+    "email": "Courriel (facultatif)",
+    "emailHelp": "Sert uniquement à vous envoyer un lien qui retire votre voix plus tard, en un clic. Il n'est jamais affiché ni partagé.",
+    "submit": "Ajouter ma voix",
+    "submitting": "Ajout de votre voix…",
+    "success": "Votre voix a été ajoutée. Merci.",
+    "successWithEmail": "Votre voix a été ajoutée. Nous vous avons envoyé un lien qui la retire à tout moment, en un clic.",
+    "offline": "Vous êtes hors ligne. Votre voix est enregistrée sur cet appareil et sera envoyée dès la reconnexion.",
+    "privacyNote": "Nous n'enregistrons pas votre position, et ne conservons rien qui puisse relier ceci à vous, sauf si vous le demandez."
+  },
+  "withdraw": {
+    "title": "Retirer votre voix",
+    "body": "Ceci retire votre voix du mur et du décompte. C'est irréversible, et aucune raison n'est demandée.",
+    "confirm": "Retirer ma voix",
+    "success": "Votre voix a été retirée.",
+    "invalid": "Ce lien n'est plus valide. Il a peut-être déjà été utilisé."
+  },
+  "share": {
+    "title": "Partager votre voix",
+    "note": "La carte ne porte ni position ni nom complet, sauf si vous avez choisi de les montrer."
+  }
+}

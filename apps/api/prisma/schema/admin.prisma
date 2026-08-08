@@ -1,0 +1,97 @@
+// Module E — Administration, moderation and the immutable audit trail.
+
+model Report {
+  id         String           @id @default(uuid())
+  targetType ReportTargetType
+  targetId   String
+  reporterId String?
+  reporter   User?            @relation("Reporter", fields: [reporterId], references: [id], onDelete: SetNull)
+  reason     ReportReason
+  detail     String?
+  status     String           @default("OPEN")
+  createdAt  DateTime         @default(now())
+
+  decisions ModerationDecision[]
+
+  @@index([status, createdAt])
+  @@index([targetType, targetId])
+  @@map("reports")
+}
+
+/// M-2 — the record states which rule was applied, so that identical facts can
+/// be checked for identical treatment regardless of who the speaker was.
+model ModerationDecision {
+  id          String           @id @default(uuid())
+  reportId    String?
+  report      Report?          @relation(fields: [reportId], references: [id], onDelete: SetNull)
+  targetType  ReportTargetType
+  targetId    String
+  moderatorId String
+  moderator   User             @relation(fields: [moderatorId], references: [id], onDelete: Cascade)
+  action      ModerationAction
+  ruleApplied ReportReason?
+  note        String?
+  createdAt   DateTime         @default(now())
+
+  appeals Appeal[]
+
+  @@index([targetType, targetId])
+  @@index([createdAt])
+  @@map("moderation_decisions")
+}
+
+/// M-3 — an appeals process available to every member.
+model Appeal {
+  id         String             @id @default(uuid())
+  decisionId String
+  decision   ModerationDecision @relation(fields: [decisionId], references: [id], onDelete: Cascade)
+  argument   String
+  status     String             @default("OPEN")
+  outcome    String?
+  createdAt  DateTime           @default(now())
+  resolvedAt DateTime?
+
+  @@index([status])
+  @@map("appeals")
+}
+
+/// NFR "Audit" — append-only. No update or delete path exists in the service
+/// layer, and a database trigger (see migration) rejects both.
+model AuditLog {
+  id        String   @id @default(uuid())
+  actorId   String?
+  actor     User?    @relation(fields: [actorId], references: [id], onDelete: SetNull)
+  action    String
+  target    String
+  metadata  Json     @default("{}")
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+  @@index([actorId])
+  @@map("audit_logs")
+}
+
+/// E-5 — modules launch in phases behind flags.
+model FeatureFlag {
+  key       String   @id
+  enabled   Boolean  @default(false)
+  updatedAt DateTime @updatedAt
+
+  @@map("feature_flags")
+}
+
+/// E-3 — the aggregate snapshot the Foundation sees. Every column is a total
+/// or a breadth count; none of them can be decomposed by group.
+model StatsSnapshot {
+  id                        String   @id @default(uuid())
+  totalVoices               Int
+  countriesRepresented      Int
+  totalMembers              Int
+  activeCircles             Int
+  casesOpened               Int
+  casesReachingUnderstanding Int
+  capturedAt                DateTime @default(now())
+
+  @@index([capturedAt])
+  @@map("stats_snapshots")
+}

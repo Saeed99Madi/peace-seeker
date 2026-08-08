@@ -1,0 +1,76 @@
+{
+  "join": {
+    "title": "Devenir membre",
+    "intro": "La charte demande une seule chose à un membre : qu'il se présente.",
+    "name": "Comment vous appellerons-nous ?",
+    "nameHelp": "Le nom de votre choix. Un pseudonyme est bienvenu, et le restera toujours.",
+    "email": "Courriel",
+    "emailHelp": "Sert à vous connecter par lien. Nous le conservons sous forme d'empreinte à sens unique et ne le montrons à personne.",
+    "introduction": "Parlez-nous de vous",
+    "introductionHelp": "Qui vous êtes, ce que vous faites, et ce que la paix signifie pour vous. Entre {min} et {max} caractères.",
+    "introductionCount": "{count} sur {min} caractères",
+    "notAsked": {
+      "title": "Ce que nous ne vous demanderons jamais",
+      "body": "Votre religion, votre confession, votre origine ethnique, votre nationalité d'origine, vos opinions politiques, de quel camp vous êtes, ou où vous êtes au-delà de votre pays. Ni comme champ facultatif, ni comme champ caché. La plateforme n'a nulle part où mettre ces réponses, et c'est pourquoi elle ne pourra jamais servir à trier les gens en groupes."
+    },
+    "charter": {
+      "affirm": "J'ai lu la Vision fondatrice, et j'y adhère.",
+      "read": "Lire la Vision fondatrice",
+      "conduct": "J'ai lu le Code de conduite, et je m'y tiendrai."
+    },
+    "submit": "Rejoindre",
+    "success": "Bienvenue. Nous avons envoyé un lien de connexion à votre adresse.",
+    "existing": "Déjà membre ?"
+  },
+  "signIn": {
+    "title": "Se connecter",
+    "intro": "Nous enverrons un lien à votre adresse. Aucun mot de passe à retenir, et aucun qu'on puisse vous soutirer.",
+    "email": "Courriel",
+    "submit": "Envoyez-moi un lien",
+    "sent": "Si cette adresse appartient à un membre, un lien de connexion est en route.",
+    "verifying": "Connexion en cours…",
+    "failed": "Ce lien a expiré ou a déjà été utilisé. Demandez-en un autre."
+  },
+  "profile": {
+    "title": "Votre profil",
+    "visibility": {
+      "label": "Qui peut voir votre profil",
+      "PUBLIC": "Tout le monde",
+      "MEMBERS_ONLY": "Les membres seulement",
+      "PRIVATE": "Vous seul"
+    },
+    "languages": "Langues que vous parlez",
+    "skills": "Ce que vous pouvez offrir",
+    "skillsHelp": "Médecine, enseignement, traduction, ingénierie, médiation — tout ce que vous donneriez à ce travail.",
+    "country": "Pays (facultatif)",
+    "save": "Enregistrer"
+  },
+  "safety": {
+    "title": "Votre sécurité",
+    "hidePresence": {
+      "title": "Masquer ma présence",
+      "body": "Rend votre profil et tout ce qui vous est attribué privé, immédiatement. Rien n'est supprimé, et vous pouvez revenir en arrière quand vous voulez.",
+      "enable": "Me masquer maintenant",
+      "disable": "Me rendre visible à nouveau",
+      "hidden": "Votre présence est masquée."
+    },
+    "delete": {
+      "title": "Supprimer mon compte",
+      "body": "Votre profil, vos messages et tout ce qui vous est attribué sont supprimés sous 30 jours, et les sauvegardes sont purgées lors de la rotation habituelle. Nous vous écrivons quand c'est fait.",
+      "voiceQuestion": "Que doit-il advenir de votre voix sur le mur ?",
+      "anonymise": "La garder, sans nom",
+      "remove": "La supprimer entièrement",
+      "confirmLabel": "Écrivez DELETE pour confirmer",
+      "submit": "Supprimer mon compte"
+    }
+  },
+  "directory": {
+    "title": "Membres",
+    "intro": "On peut chercher par les langues que les gens parlent et par ce qu'ils peuvent offrir — et par rien d'autre.",
+    "language": "Langue",
+    "skill": "Offre",
+    "empty": "Aucun membre ne correspond encore à cette recherche.",
+    "joined": "Membre depuis {date}",
+    "signInRequired": "Connectez-vous pour voir l’annuaire des membres. Les profils sont par défaut réservés aux membres et ne sont pas montrés aux visiteurs."
+  }
+}

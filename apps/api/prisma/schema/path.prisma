@@ -1,0 +1,140 @@
+// Module D — The Path. Symmetry is enforced by the shape of the data itself:
+// there is no "initiator" flag, no party ordering, and no per-party limits.
+
+model Case {
+  id          String            @id @default(uuid())
+  reference   String            @unique
+  status      CaseStatus        @default(AWAITING_CONSENT)
+  stage       CaseStage         @default(CONSENT)
+  language    String
+  /// The window applies identically to both parties (D-3).
+  stageDueAt  DateTime?
+  /// D-8 — set when intake routes the matter off the platform.
+  outOfScope  OutOfScopeReason?
+  outcomeType String?
+  facilitatorId String?
+  facilitator FacilitatorProfile? @relation(fields: [facilitatorId], references: [userId], onDelete: SetNull)
+  createdAt   DateTime          @default(now())
+  closedAt    DateTime?
+
+  parties    CaseParty[]
+  statements CaseStatement[]
+  invites    CaseInvite[]
+  followUps  CaseFollowUp[]
+  outcome    OutcomePattern?
+
+  @@index([status, stage])
+  @@map("cases")
+}
+
+/// One row per party. Both rows are structurally identical; `sideToken` is a
+/// random label so that no stable "Party A / Party B" ordering exists in the
+/// data or in the interface (§10 note, §3.1).
+model CaseParty {
+  id             String    @id @default(uuid())
+  caseId         String
+  case           Case      @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  userId         String
+  user           User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  sideToken      String
+  consentedAt    DateTime?
+  withdrawnAt    DateTime?
+  /// D-1 intake, held per party and released to the other only after review (D-2).
+  situation      String?
+  hopedFor       String?
+  willingToOffer String?
+  /// D-6 — publication needs both parties to say yes, independently.
+  publicationConsent Boolean @default(false)
+  /// D-5 — each party may change facilitator once, without giving a reason.
+  facilitatorChangesUsed Int  @default(0)
+  facilitatorAccepted Boolean @default(false)
+  /// §13 — measured symmetrically; the *gap* between the two is the key metric.
+  fairnessRating Int?
+
+  statements CaseStatement[]
+
+  @@unique([caseId, userId])
+  @@unique([caseId, sideToken])
+  @@map("case_parties")
+}
+
+/// D-3 — identical limits, identical windows, identical counts. Draft history
+/// and time-taken are deliberately not exposed to the other party, so neither
+/// `draftCount` nor `timeSpentSeconds` exists as a readable column.
+model CaseStatement {
+  id          String    @id @default(uuid())
+  caseId      String
+  case        Case      @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  partyId     String
+  party       CaseParty @relation(fields: [partyId], references: [id], onDelete: Cascade)
+  stage       CaseStage
+  body        String
+  wordCount   Int
+  /// D-2 — the facilitator reviews before the other party ever sees it.
+  reviewedAt  DateTime?
+  releasedAt  DateTime?
+  submittedAt DateTime  @default(now())
+
+  @@unique([caseId, partyId, stage])
+  @@index([caseId, stage])
+  @@map("case_statements")
+}
+
+/// D-1 — the invited party must consent before the case proceeds.
+model CaseInvite {
+  id         String    @id @default(uuid())
+  caseId     String
+  case       Case      @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  emailHash  String
+  tokenHash  String    @unique
+  expiresAt  DateTime
+  acceptedAt DateTime?
+  declinedAt DateTime?
+  createdAt  DateTime  @default(now())
+
+  @@index([caseId])
+  @@map("case_invites")
+}
+
+/// D-4 stage 7 — check-ins at 30 and 90 days.
+model CaseFollowUp {
+  id          String    @id @default(uuid())
+  caseId      String
+  case        Case      @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  dayOffset   Int
+  dueAt       DateTime
+  completedAt DateTime?
+  holding     Boolean?
+
+  @@unique([caseId, dayOffset])
+  @@map("case_follow_ups")
+}
+
+/// D-9 — anonymised, consented patterns published as learning material.
+model OutcomePattern {
+  id          String    @id @default(uuid())
+  caseId      String    @unique
+  case        Case      @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  title       String
+  summary     String
+  language    String
+  publishedAt DateTime?
+
+  @@map("outcome_patterns")
+}
+
+/// E-2 / D-5 — a vetted, trained neutral with no power to impose an outcome.
+model FacilitatorProfile {
+  userId          String    @id
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  appliedAt       DateTime  @default(now())
+  vettedAt        DateTime?
+  trainingRecords Json      @default("[]")
+  languages       String[]  @default([])
+  active          Boolean   @default(false)
+  lastReviewedAt  DateTime?
+
+  cases Case[]
+
+  @@map("facilitator_profiles")
+}

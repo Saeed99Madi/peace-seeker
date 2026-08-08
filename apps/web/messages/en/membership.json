@@ -1,0 +1,76 @@
+{
+  "join": {
+    "title": "Become a member",
+    "intro": "The charter asks one thing of a member: that you introduce yourself.",
+    "name": "What shall we call you?",
+    "nameHelp": "Any name you choose. A pseudonym is welcome and always will be.",
+    "email": "Email",
+    "emailHelp": "Used to sign you in with a link. We store it as a one-way hash and never show it to anyone.",
+    "introduction": "Tell us about yourself",
+    "introductionHelp": "Who you are, what you do, and what peace means to you. Between {min} and {max} characters.",
+    "introductionCount": "{count} of {min} characters",
+    "notAsked": {
+      "title": "What we will never ask you",
+      "body": "Your religion, your sect, your ethnicity, your nationality of origin, your politics, which side you are from, or where you are beyond your country. Not as an optional field, not hidden. The platform has nowhere to put those answers, which is why it can never be used to sort people into groups."
+    },
+    "charter": {
+      "affirm": "I have read the Founding Vision, and I affirm it.",
+      "read": "Read the Founding Vision",
+      "conduct": "I have read the Code of Conduct, and I will keep to it."
+    },
+    "submit": "Join",
+    "success": "Welcome. We have sent a sign-in link to your address.",
+    "existing": "Already a member?"
+  },
+  "signIn": {
+    "title": "Sign in",
+    "intro": "We will send a link to your address. There is no password to remember, and none to be taken from you.",
+    "email": "Email",
+    "submit": "Send me a link",
+    "sent": "If that address belongs to a member, a sign-in link is on its way.",
+    "verifying": "Signing you in…",
+    "failed": "This link has expired or has already been used. Ask for another."
+  },
+  "profile": {
+    "title": "Your profile",
+    "visibility": {
+      "label": "Who can see your profile",
+      "PUBLIC": "Anyone",
+      "MEMBERS_ONLY": "Members only",
+      "PRIVATE": "Only you"
+    },
+    "languages": "Languages you speak",
+    "skills": "What you can offer",
+    "skillsHelp": "Medicine, teaching, translation, engineering, mediation — anything you would give to this work.",
+    "country": "Country (optional)",
+    "save": "Save"
+  },
+  "safety": {
+    "title": "Your safety",
+    "hidePresence": {
+      "title": "Hide my presence",
+      "body": "Makes your profile and everything attributed to you private, at once. Nothing is deleted, and you can undo it whenever you wish.",
+      "enable": "Hide me now",
+      "disable": "Make me visible again",
+      "hidden": "Your presence is hidden."
+    },
+    "delete": {
+      "title": "Delete my account",
+      "body": "Your profile, your messages and everything attributed to you are removed within 30 days, and backups are purged on the normal rotation. We write to you when it is done.",
+      "voiceQuestion": "What should happen to your voice on the wall?",
+      "anonymise": "Keep it, with no name attached",
+      "remove": "Remove it entirely",
+      "confirmLabel": "Type DELETE to confirm",
+      "submit": "Delete my account"
+    }
+  },
+  "directory": {
+    "title": "Members",
+    "intro": "Searchable by the languages people speak and what they can offer — and by nothing else.",
+    "language": "Language",
+    "skill": "Offering",
+    "empty": "No members match that search yet.",
+    "joined": "Member since {date}",
+    "signInRequired": "Sign in to see the member directory. Profiles default to members-only, so they are not shown to visitors."
+  }
+}

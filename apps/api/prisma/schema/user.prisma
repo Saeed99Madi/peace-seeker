@@ -1,0 +1,138 @@
+// Module B — Membership, authentication and the right to disappear.
+
+/// Note what is absent: no religion, sect, ethnicity, nationality-of-origin,
+/// political affiliation, conflict side, or location finer than country.
+/// That absence is a requirement (B-3, S-3), not an oversight.
+model User {
+  id                String            @id @default(uuid())
+  displayName       String
+  /// S-1/S-7 — the address itself is stored only to deliver magic links and
+  /// notifications; lookups go through the hash so the plaintext column can be
+  /// dropped for a member the moment they no longer need email delivery.
+  email             String            @unique
+  emailHash         String            @unique
+  emailVerifiedAt   DateTime?
+  /// B-1 — the self-introduction: the one substantive membership requirement.
+  introduction      String
+  country           String?
+  languages         String[]          @default([])
+  skills            String[]          @default([])
+  links             String[]          @default([])
+  locale            String            @default("en")
+  visibility        ProfileVisibility @default(MEMBERS_ONLY)
+  roles             UserRole[]        @default([MEMBER])
+  status            AccountStatus     @default(ACTIVE)
+  /// S-10 — "hide my presence": instantly private, nothing deleted.
+  presenceHidden    Boolean           @default(false)
+  /// B-4 — which version of the Founding Vision this member affirmed.
+  charterVersion    String?
+  charterAffirmedAt DateTime?
+  codeAffirmedAt    DateTime?
+  /// C-6 — who may open a direct message with me.
+  dmPolicy          String            @default("MEMBERS")
+  avatarId          String?
+  avatar            MediaAsset?       @relation("UserAvatar", fields: [avatarId], references: [id])
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+
+  credential      AuthCredential?
+  sessions        Session[]
+  magicLinks      MagicLinkToken[]
+  voices          Voice[]
+  circleMembers   CircleMembership[]
+  posts           Post[]
+  eventRsvps      EventRsvp[]
+  sentMessages    DirectMessage[]    @relation("MessageSender")
+  received        DirectMessage[]    @relation("MessageRecipient")
+  blocksMade      Block[]            @relation("Blocker")
+  blocksReceived  Block[]            @relation("Blocked")
+  caseParties     CaseParty[]
+  facilitator     FacilitatorProfile?
+  reportsFiled    Report[]           @relation("Reporter")
+  moderations     ModerationDecision[]
+  auditEntries    AuditLog[]
+  deletionRequest DeletionRequest?
+  uploads         MediaAsset[]       @relation("MediaUploader")
+
+  @@index([status])
+  @@index([visibility])
+  @@map("users")
+}
+
+/// S-9 — passwords are optional and secondary; Argon2id only.
+model AuthCredential {
+  userId       String   @id
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  passwordHash String
+  updatedAt    DateTime @updatedAt
+
+  @@map("auth_credentials")
+}
+
+/// S-9 — magic links are the preferred credential. Tokens are stored hashed.
+model MagicLinkToken {
+  id        String    @id @default(uuid())
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tokenHash String    @unique
+  purpose   String    @default("LOGIN")
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+
+  @@index([userId])
+  @@map("magic_link_tokens")
+}
+
+/// S-9 — device list and remote revocation.
+model Session {
+  id           String    @id @default(uuid())
+  userId       String
+  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tokenHash    String    @unique
+  /// A coarse label the member can recognise ("Firefox on Android"). Never an IP.
+  deviceLabel  String?
+  createdAt    DateTime  @default(now())
+  lastSeenAt   DateTime  @default(now())
+  expiresAt    DateTime
+  revokedAt    DateTime?
+
+  @@index([userId])
+  @@map("sessions")
+}
+
+/// S-5 — a deletion request is a promise with a deadline attached.
+model DeletionRequest {
+  id            String    @id @default(uuid())
+  userId        String    @unique
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  voiceHandling String    @default("ANONYMISE")
+  requestedAt   DateTime  @default(now())
+  dueAt         DateTime
+  completedAt   DateTime?
+  confirmedAt   DateTime?
+
+  @@map("deletion_requests")
+}
+
+/// S-3 — media is stored with EXIF/GPS already stripped at ingest.
+model MediaAsset {
+  id              String        @id @default(uuid())
+  kind            MediaKind
+  storageKey      String        @unique
+  mimeType        String
+  bytes           Int
+  durationSeconds Int?
+  metadataStripped Boolean      @default(false)
+  scannedAt       DateTime?
+  status          ContentStatus @default(PENDING)
+  uploaderId      String?
+  uploader        User?         @relation("MediaUploader", fields: [uploaderId], references: [id], onDelete: SetNull)
+  createdAt       DateTime      @default(now())
+
+  voices     Voice[]
+  avatarFor  User[] @relation("UserAvatar")
+
+  @@index([status])
+  @@map("media_assets")
+}

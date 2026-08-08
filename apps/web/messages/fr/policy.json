@@ -1,0 +1,53 @@
+{
+  "conduct": {
+    "title": "Code de conduite",
+    "intro": "Ces règles viennent de la charte, et s'appliquent de la même manière à tous, quels qu'ils soient et de quelque camp qu'on les croie.",
+    "rules": {
+      "dehumanization": "Pas de déshumanisation. Aucun peuple décrit comme moins qu'humain, quoi qu'on ait fait en son nom.",
+      "incitement": "Aucune incitation à la violence contre qui que ce soit.",
+      "glorification": "Aucune glorification de la violence, ni célébration du mal fait à quiconque.",
+      "harassment": "Aucun harcèlement d'un membre, ici ou ailleurs.",
+      "doxxing": "Aucune publication de l'identité, du lieu ou des coordonnées de quiconque. Ici, cela peut coûter une vie.",
+      "recruitment": "Aucun recrutement pour une action armée, de quelque nature que ce soit.",
+      "denial": "Aucune négation d'atrocités documentées commises contre un peuple."
+    },
+    "protected": {
+      "title": "Ce qui est protégé ici",
+      "body": "La critique des gouvernements, des politiques, des armées et des institutions est une parole protégée sur cette plateforme, dans toutes les directions. Les attaques contre des êtres humains ne le sont pas. Cette distinction est toute la ligne, et elle est tenue également pour chacun."
+    },
+    "symmetry": {
+      "title": "Comment fonctionne la modération",
+      "body": "La même règle, appliquée à l'identique, quel que soit celui qui parle. Chaque décision consigne la règle appliquée et reste révisable. L'équipe qui les prend est délibérément plurielle. Tout membre peut faire appel de toute décision le concernant, et un appel n'est jamais examiné par la personne qui a pris la décision d'origine."
+    }
+  },
+  "safety": {
+    "title": "Votre sécurité",
+    "intro": "Être visiblement associé à un travail de paix par-delà une ligne de conflit peut comporter un risque réel. Voici exactement ce que cette plateforme sait de vous, et ce que vous pouvez y faire.",
+    "held": {
+      "title": "Ce que nous conservons",
+      "body": "Le nom que vous avez choisi, qui n'a pas à être le vôtre. Votre adresse électronique, gardée sous forme d'empreinte à sens unique. Votre pays, si vous l'avez donné. Ce que vous avez écrit. C'est tout."
+    },
+    "never": {
+      "title": "Ce que nous ne conservons jamais",
+      "body": "Votre religion, confession, origine ethnique, nationalité d'origine, opinions politiques ou camp. Aucune localisation plus fine qu'un pays. Aucune photographie portant encore le lieu et l'heure de sa prise — ces données sont retirées de chaque fichier avant enregistrement, et un fichier que nous ne pouvons pas nettoyer est refusé plutôt que conservé."
+    },
+    "controls": {
+      "title": "Ce que vous pouvez faire à tout moment",
+      "hide": "Masquer votre présence : votre profil et tout ce qui vous est attribué deviennent privés immédiatement. Rien n'est supprimé, et c'est réversible.",
+      "withdraw": "Retirer une voix : en un clic, depuis le lien envoyé au moment où vous l'avez ajoutée. Sans compte, sans connexion, sans raison à donner.",
+      "delete": "Supprimer votre compte : tout ce qui vous est attribué disparaît sous 30 jours et les sauvegardes sont purgées lors de la rotation habituelle. Nous vous écrivons quand c'est fait."
+    },
+    "limits": {
+      "title": "Ce que nous ne pouvons pas faire",
+      "body": "Nous ne pouvons pas vous protéger de quelqu'un qui surveille votre appareil ou votre connexion. Nous ne pouvons pas empêcher quelqu'un qui vous connaît déjà de reconnaître vos mots. Et nous ne sommes pas un service d'urgence — si vous êtes en danger, appelez ceux qui peuvent réellement venir."
+    }
+  },
+  "transparency": {
+    "title": "Transparence",
+    "hosting": "La plateforme est hébergée dans l'Union européenne, sous un droit qui limite ce qu'une autorité peut exiger et nous oblige à vous prévenir si quelque chose tourne mal.",
+    "requests": "Si un gouvernement nous demande des données sur un membre, nous exigeons une procédure légale, nous restreignons ce qui est produit à ce que cette procédure impose réellement, et nous prévenons le membre sauf si la loi nous l'interdit. Nous publions le nombre de demandes reçues et le nombre auxquelles il a été donné suite.",
+    "noTrackers": "Aucun pixel publicitaire, aucune statistique tierce, aucun script de réseau social sur aucune page de ce site. Rien ici ne signale votre visite à qui que ce soit.",
+    "logs": "Les journaux du serveur conservent une empreinte de votre adresse pendant sept jours, pour empêcher les abus, et rien d'autre.",
+    "report": "Rapport de transparence"
+  }
+}

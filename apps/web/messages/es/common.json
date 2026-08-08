@@ -1,0 +1,55 @@
+{
+  "brand": {
+    "name": "Buscadores de paz",
+    "foundation": "Fundación Paz en Todas Partes",
+    "tagline": "La paz es el levantamiento de la injusticia."
+  },
+  "nav": {
+    "home": "Inicio",
+    "charter": "La Visión fundacional",
+    "voices": "Muro de las voces",
+    "addVoice": "Añade tu voz",
+    "join": "Hazte miembro",
+    "circles": "Círculos",
+    "members": "Miembros",
+    "path": "El Camino",
+    "conduct": "Código de conducta",
+    "safety": "Tu seguridad",
+    "signIn": "Iniciar sesión",
+    "signOut": "Cerrar sesión",
+    "menu": "Menú",
+    "skipToContent": "Ir al contenido principal"
+  },
+  "language": {
+    "label": "Idioma",
+    "change": "Cambiar de idioma"
+  },
+  "actions": {
+    "submit": "Enviar",
+    "cancel": "Cancelar",
+    "back": "Volver",
+    "continue": "Continuar",
+    "learnMore": "Saber más",
+    "share": "Compartir",
+    "withdraw": "Retirar",
+    "loadMore": "Ver más"
+  },
+  "footer": {
+    "notLegal": "Esta plataforma no es un servicio jurídico, ni un arbitraje, ni un tribunal, y no dicta resoluciones vinculantes. No sustituye a la protección legal ni a los servicios de emergencia.",
+    "noTracking": "Sin publicidad, sin rastreadores, sin analíticas que te identifiquen.",
+    "transparency": "Política de transparencia",
+    "privacy": "Privacidad",
+    "contact": "Contactar con la Fundación"
+  },
+  "errors": {
+    "generic": "Algo ha salido mal. Inténtalo de nuevo.",
+    "network": "No hemos podido llegar al servidor. Lo que escribiste se ha guardado en este dispositivo.",
+    "required": "Este campo es obligatorio."
+  },
+  "notFound": {
+    "title": "Esa página no está aquí.",
+    "body": "Puede que el enlace sea antiguo o que la dirección esté mal escrita. No le ha pasado nada a tu cuenta ni a tu voz.",
+    "home": "Ir al inicio",
+    "voices": "Ver el Muro de las voces"
+  }
+}

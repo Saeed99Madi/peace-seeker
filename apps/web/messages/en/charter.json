@@ -1,0 +1,44 @@
+{
+  "title": "The Founding Vision",
+  "subtitle": "This text is the reference for every decision made on this platform.",
+  "peace": {
+    "heading": "Peace",
+    "definition": "Peace — its meaning and its foundation is the lifting of injustice.",
+    "submission": "Submission to peace: no oppressor and no oppressed.",
+    "basis": "Its basis is to resolve problems between two parties without one party feeling that it is stronger, and without the other party feeling that it is wronged."
+  },
+  "vision": {
+    "heading": "The vision",
+    "creation": "God created the universe.",
+    "nerveCell": "The greatest of God's creation is the nerve cell.",
+    "purpose": "What does God want from the creation of the universe? The building of the universe, and peace.",
+    "religionAndScience": "Religion and science complete one another.",
+    "humanity": "Humanity is the goal.",
+    "oneCountry": "The whole world is one country.",
+    "shortLife": "Life is short, and we live only once — so why not live it in peace?"
+  },
+  "membership": {
+    "heading": "Membership",
+    "requirement": "The requirement is that a person introduces themselves. Nothing more."
+  },
+  "principles": {
+    "heading": "How this becomes a platform",
+    "symmetry": {
+      "title": "Symmetry",
+      "body": "This platform will never show one group as larger, stronger or more numerous than another. There is one count of voices for peace, and no breakdown of it by nation, faith or side — a breakdown would make a scoreboard, which is the opposite of the purpose. There are no rankings and no leaderboards. In any process between two parties, both receive the same interface, the same limits and the same rights, and the order in which they appear is decided at random each time."
+    },
+    "dignity": {
+      "title": "Dignity over engagement",
+      "body": "No likes, no follower counts, nothing that rewards conflict with attention. What you read is in the order it was written, or in an order a person chose — never an order a machine chose to keep you here."
+    },
+    "safety": {
+      "title": "Safety first",
+      "body": "Many members live under occupation, under surveillance, or under authorities hostile to peace work across a border. Being visible here can carry real risk. You may take part under any name you choose, we never ask where you are beyond your country, and you can hide or remove everything you have written at any moment."
+    },
+    "oneCountry": {
+      "title": "One country",
+      "body": "The platform is global from its first day: four languages at launch, full right-to-left support, and no language treated as the real one that the others translate."
+    }
+  },
+  "translationNote": "Every translation of this text is reviewed by a human translator. It is never machine-translated."
+}

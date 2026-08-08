@@ -1,0 +1,55 @@
+{
+  "brand": {
+    "name": "Chercheurs de paix",
+    "foundation": "Fondation La paix partout",
+    "tagline": "La paix, c'est la levée de l'injustice."
+  },
+  "nav": {
+    "home": "Accueil",
+    "charter": "La Vision fondatrice",
+    "voices": "Mur des voix",
+    "addVoice": "Ajouter votre voix",
+    "join": "Devenir membre",
+    "circles": "Cercles",
+    "members": "Membres",
+    "path": "Le Chemin",
+    "conduct": "Code de conduite",
+    "safety": "Votre sécurité",
+    "signIn": "Se connecter",
+    "signOut": "Se déconnecter",
+    "menu": "Menu",
+    "skipToContent": "Aller au contenu principal"
+  },
+  "language": {
+    "label": "Langue",
+    "change": "Changer de langue"
+  },
+  "actions": {
+    "submit": "Envoyer",
+    "cancel": "Annuler",
+    "back": "Retour",
+    "continue": "Continuer",
+    "learnMore": "En savoir plus",
+    "share": "Partager",
+    "withdraw": "Retirer",
+    "loadMore": "Afficher plus"
+  },
+  "footer": {
+    "notLegal": "Cette plateforme n'est ni un service juridique, ni un arbitrage, ni une juridiction, et ne rend aucune décision contraignante. Elle ne remplace ni la protection juridique ni les services d'urgence.",
+    "noTracking": "Aucune publicité, aucun traceur, aucune statistique qui vous identifie.",
+    "transparency": "Politique de transparence",
+    "privacy": "Confidentialité",
+    "contact": "Contacter la Fondation"
+  },
+  "errors": {
+    "generic": "Une erreur s'est produite. Veuillez réessayer.",
+    "network": "Le serveur est injoignable. Ce que vous avez écrit a été conservé sur cet appareil.",
+    "required": "Ce champ est obligatoire."
+  },
+  "notFound": {
+    "title": "Cette page n’est pas ici.",
+    "body": "Le lien est peut-être ancien, ou l’adresse mal saisie. Rien n’est arrivé à votre compte ni à votre voix.",
+    "home": "Aller à l’accueil",
+    "voices": "Voir le Mur des voix"
+  }
+}

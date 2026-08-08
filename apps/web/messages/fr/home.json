@@ -1,0 +1,55 @@
+{
+  "eyebrow": "Fondation La paix partout",
+  "mark": {
+    "alt": "Deux cercles égaux, et là où ils se recouvrent une feuille pousse",
+    "caption": "Deux cercles de même taille. Aucun ne contient l'autre. Ce qui pousse est ce qu'ils partagent."
+  },
+  "vision": {
+    "eyebrow": "La Vision fondatrice",
+    "title": "Sept choses sur lesquelles ceci est bâti",
+    "cta": "Lire la vision entière"
+  },
+  "symmetry": {
+    "eyebrow": "Comment fonctionne le Chemin",
+    "title": "Ce qu'une partie reçoit, l'autre le reçoit.",
+    "body": "Quand deux personnes apportent ici un problème, la plateforme leur donne le même instrument. Non pas semblable — le même. Voici les termes, écrits une seule fois et appliqués aux deux.",
+    "party": "Chaque partie",
+    "rights": {
+      "words": "La même limite sur ce que vous pouvez écrire",
+      "window": "Le même délai pour répondre",
+      "statements": "Une déclaration chacun, à chaque étape",
+      "visibility": "Aucun ne voit le temps qu'a pris l'autre",
+      "withdraw": "Chacun peut arrêter, à tout moment, sans pénalité",
+      "facilitator": "Chacun peut changer de facilitateur une fois, sans raison"
+    },
+    "caption": "Les deux panneaux sont produits à partir d’une seule liste par un seul composant : ils ne peuvent pas diverger, car les termes sont écrits une fois et appliqués aux deux. Aucun n’est « la première partie » — dans un vrai dossier, la plateforme attribue à chaque camp une étiquette provisoire tirée au sort, si bien qu’aucun ordre fixe n’existe nulle part, pas même dans la base de données."
+  },
+  "wall": {
+    "eyebrow": "Le Mur des voix",
+    "cta": "Voir toutes les voix"
+  },
+  "join": {
+    "eyebrow": "Adhésion",
+    "title": "Tout ce qui est demandé, c'est que vous vous présentiez.",
+    "body": "Ni votre religion, ni votre nationalité, ni de quel camp vous êtes. Nous ne le demandons pas, et il n'existe nulle part dans cette plateforme où mettre la réponse.",
+    "cta": "Devenir membre",
+    "secondary": "Ce que nous ne demandons jamais"
+  },
+  "photos": {
+    "olive": {
+      "alt": "Une branche d’olivier, une olive mûre parmi les feuilles"
+    },
+    "earth": {
+      "alt": "La Terre vue depuis l’orbite, son atmosphère éclairée à l’horizon"
+    },
+    "reach": {
+      "alt": "Deux personnes tendant la main l’une vers l’autre, presque en contact"
+    },
+    "offer": {
+      "alt": "Deux mains ouvertes, tendues en coupe"
+    }
+  },
+  "oneCountry": {
+    "eyebrow": "Un seul pays"
+  }
+}
