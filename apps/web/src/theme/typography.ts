@@ -12,7 +12,12 @@ import { TYPE_SCALE } from './tokens';
  * Both stacks are system fonts: a web font is a request to a third party (S-6)
  * and 40–120 KB on a 3G connection (§7).
  */
+/**
+ * Onest for the Latin languages, via the CSS variable next/font exposes, with
+ * the system stack behind it for the moment before the file lands.
+ */
 const LATIN = [
+  'var(--font-onest)',
   '-apple-system',
   'BlinkMacSystemFont',
   '"Segoe UI"',

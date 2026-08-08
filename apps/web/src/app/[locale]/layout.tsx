@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import { getDirection, isLocale, LOCALES, type Locale } from '@peace/shared';
 import { SITE_URL, url } from '@/lib/site';
 import { FoundationSchema } from '@/components/seo/FoundationSchema';
+import { onest } from '@/theme/fonts';
 import { ThemeRegistry } from '@/theme/ThemeRegistry';
 import { AppHeader } from '@/components/layout/AppHeader';
 import { AppFooter } from '@/components/layout/AppFooter';
@@ -73,7 +74,12 @@ export default async function LocaleLayout({
   const direction = getDirection(locale as Locale);
 
   return (
-    <html lang={locale} dir={direction} suppressHydrationWarning>
+    <html
+      lang={locale}
+      dir={direction}
+      className={direction === 'ltr' ? onest.variable : undefined}
+      suppressHydrationWarning
+    >
       <body>
         <FoundationSchema
           locale={locale as Locale}
