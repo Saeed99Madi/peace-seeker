@@ -32,7 +32,7 @@ export default async function ConductPage({ params }: { params: Promise<{ locale
 
   return (
     <>
-      <PageHeading title={t('conduct.title')} subtitle={t('conduct.intro')} />
+      <PageHeading maxWidth="md" title={t('conduct.title')} subtitle={t('conduct.intro')} />
       <Container maxWidth="md" sx={{ pb: 8 }}>
         <Stack spacing={4}>
           <Stack component="ul" spacing={2} sx={{ listStyle: 'none', p: 0, m: 0 }}>

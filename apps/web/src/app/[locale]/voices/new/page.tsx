@@ -18,7 +18,7 @@ export default async function AddVoicePage({ params }: { params: Promise<{ local
 
   return (
     <>
-      <PageHeading title={t('form.title')} />
+      <PageHeading maxWidth="sm" title={t('form.title')} />
       <Container maxWidth="sm" sx={{ pb: 8 }}>
         <VoiceForm />
       </Container>

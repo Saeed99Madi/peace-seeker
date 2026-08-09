@@ -28,7 +28,7 @@ export default async function TransparencyPage({
 
   return (
     <>
-      <PageHeading title={t('transparency.title')} />
+      <PageHeading maxWidth="md" title={t('transparency.title')} />
       <Container maxWidth="md" sx={{ pb: 8 }}>
         <Stack spacing={3}>
           {STATEMENTS.map((statement) => (

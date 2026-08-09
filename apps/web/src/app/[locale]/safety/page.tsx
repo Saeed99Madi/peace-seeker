@@ -29,7 +29,7 @@ export default async function SafetyPage({ params }: { params: Promise<{ locale:
 
   return (
     <>
-      <PageHeading title={t('safety.title')} subtitle={t('safety.intro')} />
+      <PageHeading maxWidth="md" title={t('safety.title')} subtitle={t('safety.intro')} />
       <Container maxWidth="md" sx={{ pb: 8 }}>
         <Stack spacing={4}>
           <Stack spacing={1}>

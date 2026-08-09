@@ -28,7 +28,7 @@ export default async function PathPage({ params }: { params: Promise<{ locale: s
 
   return (
     <>
-      <PageHeading title={t('title')} subtitle={t('subtitle')} />
+      <PageHeading maxWidth="md" title={t('title')} subtitle={t('subtitle')} />
       <Container maxWidth="md" sx={{ pb: 8 }}>
         <Stack spacing={4}>
           <Alert severity="warning">{t('notLegal')}</Alert>

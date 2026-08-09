@@ -23,7 +23,7 @@ export default async function SignInPage({ params }: { params: Promise<{ locale:
 
   return (
     <>
-      <PageHeading title={t('signIn.title')} />
+      <PageHeading maxWidth="sm" title={t('signIn.title')} />
       <Container maxWidth="sm" sx={{ pb: 8 }}>
         <SignInForm />
       </Container>

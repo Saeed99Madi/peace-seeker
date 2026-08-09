@@ -31,7 +31,7 @@ export default async function WithdrawPage({
 
   return (
     <>
-      <PageHeading title={t('withdraw.title')} subtitle={t('withdraw.body')} />
+      <PageHeading maxWidth="sm" title={t('withdraw.title')} subtitle={t('withdraw.body')} />
       <Container maxWidth="sm" sx={{ pb: 8 }}>
         <WithdrawVoice token={token ?? ''} />
       </Container>

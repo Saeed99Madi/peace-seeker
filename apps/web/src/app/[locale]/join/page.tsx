@@ -20,7 +20,7 @@ export default async function JoinPage({ params }: { params: Promise<{ locale: s
 
   return (
     <>
-      <PageHeading title={t('join.title')} />
+      <PageHeading maxWidth="sm" title={t('join.title')} />
       <Container maxWidth="sm" sx={{ pb: 8 }}>
         <Stack spacing={3}>
           <JoinForm />

@@ -35,7 +35,7 @@ export default async function AdminPage({ params }: { params: Promise<{ locale: 
 
   return (
     <>
-      <PageHeading title={t('title')} subtitle={t('intro')} />
+      <PageHeading maxWidth="md" title={t('title')} subtitle={t('intro')} />
       <Container maxWidth="md" sx={{ pb: 8 }}>
         <AdminGate>
           <Stack spacing={3}>
