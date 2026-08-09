@@ -7,6 +7,7 @@ import { getTranslations } from 'next-intl/server';
 import type { Locale } from '@peace/shared';
 import { ButtonLink } from '@/components/common/ButtonLink';
 import { PeaceMark } from '@/components/brand/PeaceMark';
+import { LiveCount } from '@/components/voice/LiveCount';
 import { fetchVoiceCount } from '@/lib/voices';
 import { BRAND, RHYTHM } from '@/theme/tokens';
 
@@ -46,27 +47,9 @@ export async function Hero({ locale }: { locale: Locale }) {
             {t('eyebrow')}
           </Typography>
 
-          <Stack spacing={1.5} alignItems="center">
-            <Typography
-              className="tabular"
-              component="p"
-              sx={{
-                fontSize: 'clamp(4rem, 2rem + 9vw, 7.5rem)',
-                fontWeight: 700,
-                lineHeight: 0.95,
-                letterSpacing: '-0.03em',
-                color: 'primary.dark',
-              }}
-            >
-              {new Intl.NumberFormat(locale).format(count.total)}
-            </Typography>
-            <Typography variant="h4" component="h1" sx={{ fontWeight: 500 }}>
-              {v('counter.label', { count: count.total })}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {v('counter.countries', { count: count.countriesRepresented })}
-            </Typography>
-          </Stack>
+          {/* Server-rendered from the cached figure, then corrected and kept
+              live over a WebSocket once the page is interactive. */}
+          <LiveCount initial={count} />
 
           <Divider sx={{ width: 56, borderBottomWidth: 2, borderColor: 'secondary.main' }} />
 

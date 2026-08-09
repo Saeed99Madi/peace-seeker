@@ -2,6 +2,7 @@ import 'reflect-metadata';
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
+import { WsAdapter } from '@nestjs/platform-ws';
 import type { NestExpressApplication } from '@nestjs/platform-express';
 import cookieParser from 'cookie-parser';
 import helmet from 'helmet';
@@ -17,6 +18,10 @@ async function bootstrap(): Promise<void> {
   const isProduction = config.get<boolean>('isProduction');
 
   app.useLogger(app.get(JsonLogger));
+
+  // Native WebSocket, not socket.io: the client then needs no library at all,
+  // which matters on a page already over its byte budget (§7).
+  app.useWebSocketAdapter(new WsAdapter(app));
 
   /**
    * S-7 / A-8 — behind a load balancer, `req.ip` is the balancer unless Express

@@ -18,6 +18,7 @@ function apiOrigin(): string {
 }
 
 const API_ORIGIN = apiOrigin();
+const WS_ORIGIN = API_ORIGIN ? API_ORIGIN.replace(/^http/, 'ws') : '';
 
 /**
  * S-6 / S-11 — the response headers for every document.
@@ -56,7 +57,9 @@ export function buildCsp(isProduction: boolean): string {
     `img-src 'self' data: blob:`,
     [`media-src 'self' blob:`, API_ORIGIN].filter(Boolean).join(' '),
     `font-src 'self'`,
-    [`connect-src 'self'`, API_ORIGIN].filter(Boolean).join(' '),
+    // The live counter opens a WebSocket to the same origin as the API; a CSP
+    // that names only https:// silently blocks wss://.
+    [`connect-src 'self'`, API_ORIGIN, WS_ORIGIN].filter(Boolean).join(' '),
     `form-action 'self'`,
     `frame-ancestors 'none'`,
     `base-uri 'none'`,

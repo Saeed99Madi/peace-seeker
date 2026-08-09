@@ -3,6 +3,9 @@ import type { VoiceCount } from '@peace/shared';
 import { PrismaService } from '../../prisma/prisma.service';
 import { RedisService } from '../../redis/redis.service';
 
+/** The channel the live counter listens on. */
+export const VOICE_COUNT_CHANNEL = 'voices:count';
+
 const CACHE_KEY = 'voices:count';
 const CACHE_TTL_SECONDS = 15;
 
@@ -85,6 +88,10 @@ export class VoiceCounterService {
       });
     });
     await this.invalidate();
+    // Announce it, rather than call the gateway directly. The counter must not
+    // know that anything is watching: it publishes, the gateway subscribes, and
+    // the dependency runs one way only.
+    await this.redis.publish(VOICE_COUNT_CHANNEL, await this.get());
   }
 
   /** Repairs the cached total from the source of truth (run after a restore). */

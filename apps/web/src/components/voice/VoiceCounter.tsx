@@ -3,6 +3,7 @@ import Typography from '@mui/material/Typography';
 import { getTranslations } from 'next-intl/server';
 import type { Locale } from '@peace/shared';
 import { fetchVoiceCount } from '@/lib/voices';
+import { LiveCount } from './LiveCount';
 
 /**
  * A-4 — the single global counter, displayed prominently.
@@ -14,22 +15,10 @@ import { fetchVoiceCount } from '@/lib/voices';
 export async function VoiceCounter({ locale }: { locale: Locale }) {
   const t = await getTranslations({ locale, namespace: 'voice' });
   const count = await fetchVoiceCount();
-  const formatter = new Intl.NumberFormat(locale);
 
   return (
-    <Stack spacing={1} alignItems="center" role="status">
-      <Typography
-        component="p"
-        sx={{ fontSize: 'clamp(2.5rem, 9vw, 5rem)', fontWeight: 700, lineHeight: 1.1 }}
-      >
-        {formatter.format(count.total)}
-      </Typography>
-      <Typography variant="h5" component="p" sx={{ textAlign: 'center' }}>
-        {t('counter.label', { count: count.total })}
-      </Typography>
-      <Typography variant="body2" color="text.secondary">
-        {t('counter.countries', { count: count.countriesRepresented })}
-      </Typography>
+    <Stack spacing={1} alignItems="center">
+      <LiveCount initial={count} />
       <Typography variant="caption" color="text.secondary" sx={{ maxWidth: '40ch', textAlign: 'center' }}>
         {t('counter.note')}
       </Typography>
