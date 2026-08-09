@@ -20,7 +20,21 @@ export const revalidate = 60;
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const voice = await getTranslations({ locale, namespace: 'voice' });
-  return pageMetadata(locale as Locale, '', { description: voice('hero.body') });
+  const common = await getTranslations({ locale, namespace: 'common' });
+
+  // Every other page sets a title and inherits the layout's `%s — brand`
+  // template; the home page set none, so it shipped the bare brand token —
+  // the one page competing against an established organisation of the same
+  // name, saying nothing to distinguish itself. `absolute` opts out of the
+  // template so the brand is not repeated. The tagline is the charter's own
+  // line, already translated in all four locales, so this adds no untranslated
+  // copy; only its trailing full stop is dropped, which every locale carries.
+  return pageMetadata(locale as Locale, '', {
+    title: {
+      absolute: `${common('brand.name')} — ${common('brand.tagline').replace(/\.$/, '')}`,
+    },
+    description: voice('hero.body'),
+  });
 }
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {

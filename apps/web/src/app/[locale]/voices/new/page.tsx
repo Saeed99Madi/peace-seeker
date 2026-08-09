@@ -8,7 +8,10 @@ import { VoiceForm } from '@/components/voice/VoiceForm';
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'voice' });
-  return pageMetadata(locale as Locale, '/voices/new', { title: t('form.title') });
+  return pageMetadata(locale as Locale, '/voices/new', {
+    title: t('form.title'),
+    description: t('form.intro'),
+  });
 }
 
 export default async function AddVoicePage({ params }: { params: Promise<{ locale: string }> }) {

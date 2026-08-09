@@ -19,7 +19,10 @@ const CONTROLS = ['hide', 'withdraw', 'delete'] as const;
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'policy' });
-  return pageMetadata(locale as Locale, '/safety', { title: t('safety.title') });
+  return pageMetadata(locale as Locale, '/safety', {
+    title: t('safety.title'),
+    description: t('safety.intro'),
+  });
 }
 
 export default async function SafetyPage({ params }: { params: Promise<{ locale: string }> }) {

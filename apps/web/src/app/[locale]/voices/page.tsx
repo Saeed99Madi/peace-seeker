@@ -12,7 +12,10 @@ export const revalidate = 60;
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'voice' });
-  return pageMetadata(locale as Locale, '/voices', { title: t('wall.title') });
+  return pageMetadata(locale as Locale, '/voices', {
+    title: t('wall.title'),
+    description: t('wall.subtitle'),
+  });
 }
 
 export default async function VoicesPage({ params }: { params: Promise<{ locale: string }> }) {

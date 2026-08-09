@@ -10,7 +10,10 @@ import { TextLink } from '@/components/common/ButtonLink';
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'membership' });
-  return pageMetadata(locale as Locale, '/join', { title: t('join.title') });
+  return pageMetadata(locale as Locale, '/join', {
+    title: t('join.title'),
+    description: t('join.intro'),
+  });
 }
 
 export default async function JoinPage({ params }: { params: Promise<{ locale: string }> }) {

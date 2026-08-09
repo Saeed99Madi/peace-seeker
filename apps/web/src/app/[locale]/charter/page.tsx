@@ -21,7 +21,10 @@ const PRINCIPLES = ['symmetry', 'dignity', 'safety', 'oneCountry'] as const;
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'charter' });
-  return pageMetadata(locale as Locale, '/charter', { title: t('title') });
+  return pageMetadata(locale as Locale, '/charter', {
+    title: t('title'),
+    description: t('subtitle'),
+  });
 }
 
 export default async function CharterPage({ params }: { params: Promise<{ locale: string }> }) {

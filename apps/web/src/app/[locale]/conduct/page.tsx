@@ -22,7 +22,10 @@ const RULES = [
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'policy' });
-  return pageMetadata(locale as Locale, '/conduct', { title: t('conduct.title') });
+  return pageMetadata(locale as Locale, '/conduct', {
+    title: t('conduct.title'),
+    description: t('conduct.intro'),
+  });
 }
 
 export default async function ConductPage({ params }: { params: Promise<{ locale: string }> }) {

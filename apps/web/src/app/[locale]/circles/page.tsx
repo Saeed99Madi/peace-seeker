@@ -33,7 +33,10 @@ async function fetchCircles(): Promise<Circle[]> {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'community' });
-  return pageMetadata(locale as Locale, '/circles', { title: t('circles.title') });
+  return pageMetadata(locale as Locale, '/circles', {
+    title: t('circles.title'),
+    description: t('circles.intro'),
+  });
 }
 
 export default async function CirclesPage({ params }: { params: Promise<{ locale: string }> }) {
