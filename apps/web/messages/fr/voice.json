@@ -40,7 +40,9 @@
     "success": "Votre voix a été ajoutée. Merci.",
     "successWithEmail": "Votre voix a été ajoutée. Nous vous avons envoyé un lien qui la retire à tout moment, en un clic.",
     "offline": "Vous êtes hors ligne. Votre voix est enregistrée sur cet appareil et sera envoyée dès la reconnexion.",
-    "privacyNote": "Nous n'enregistrons pas votre position, et ne conservons rien qui puisse relier ceci à vous, sauf si vous le demandez."
+    "privacyNote": "Nous n'enregistrons pas votre position, et ne conservons rien qui puisse relier ceci à vous, sauf si vous le demandez.",
+    "failed": "Votre voix n’a pas pu être ajoutée pour l’instant. Réessayez dans un moment.",
+    "tooMany": "Cela fait plusieurs voix en peu de temps. Patientez quelques minutes puis réessayez — la limite existe pour écarter les envois massifs, pas les personnes."
   },
   "withdraw": {
     "title": "Retirer votre voix",

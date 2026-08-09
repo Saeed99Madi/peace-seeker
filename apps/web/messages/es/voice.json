@@ -40,7 +40,9 @@
     "success": "Tu voz ha sido añadida. Gracias.",
     "successWithEmail": "Tu voz ha sido añadida. Te hemos enviado un enlace que la retira cuando quieras, con un clic.",
     "offline": "Estás sin conexión. Tu voz se ha guardado en este dispositivo y se enviará en cuanto vuelvas a conectarte.",
-    "privacyNote": "No guardamos tu ubicación, y no conservamos nada que pueda vincular esto contigo, salvo que nos lo pidas."
+    "privacyNote": "No guardamos tu ubicación, y no conservamos nada que pueda vincular esto contigo, salvo que nos lo pidas.",
+    "failed": "Tu voz no se ha podido añadir ahora mismo. Inténtalo de nuevo en un momento.",
+    "tooMany": "Son varias voces en poco tiempo. Espera unos minutos e inténtalo de nuevo — el límite existe para frenar avalanchas, no a las personas."
   },
   "withdraw": {
     "title": "Retirar tu voz",

@@ -32,7 +32,7 @@ import { useVoiceSubmission } from '@/hooks/use-voice-submission';
 export function VoiceForm() {
   const t = useTranslations('voice.form');
   const locale = useLocale() as Locale;
-  const { submit, status } = useVoiceSubmission();
+  const { submit, status, error, errorStatus } = useVoiceSubmission();
   const [email, setEmail] = useState('');
 
   const { control, handleSubmit, watch, formState } = useForm<CreateVoiceInput>({
@@ -42,10 +42,20 @@ export function VoiceForm() {
 
   const message = watch('message') ?? '';
 
-  if (status === 'done' || status === 'queued') {
+  if (status === 'done') {
     return (
       <Alert severity="success" sx={{ mt: 2 }}>
-        {status === 'queued' ? t('offline') : email ? t('successWithEmail') : t('success')}
+        {email ? t('successWithEmail') : t('success')}
+      </Alert>
+    );
+  }
+
+  // Their words are on the device and will be sent when the server is reachable
+  // again — which is a success from where the person is standing, not a failure.
+  if (status === 'queued') {
+    return (
+      <Alert severity="info" sx={{ mt: 2 }}>
+        {t('offline')}
       </Alert>
     );
   }
@@ -140,6 +150,14 @@ export function VoiceForm() {
       <Typography variant="caption" color="text.secondary">
         {t('privacyNote')}
       </Typography>
+
+      {/* The server refused and said why. Saying nothing would leave someone
+          staring at a button that appears to do nothing. */}
+      {status === 'error' ? (
+        <Alert severity="error">
+          {errorStatus === 429 ? t('tooMany') : (error ?? t('failed'))}
+        </Alert>
+      ) : null}
 
       <Button
         type="submit"

@@ -40,7 +40,9 @@
     "success": "Your voice has been added. Thank you.",
     "successWithEmail": "Your voice has been added. We have sent you a link that removes it at any time, in one click.",
     "offline": "You are offline. Your voice is saved on this device and will be sent as soon as you are connected.",
-    "privacyNote": "We do not store your location, and we keep no record that can tie this to you unless you ask us to."
+    "privacyNote": "We do not store your location, and we keep no record that can tie this to you unless you ask us to.",
+    "failed": "Your voice could not be added just now. Please try again in a moment.",
+    "tooMany": "That is several voices in a short time. Please wait a few minutes and try again — the limit is there to keep out floods, not people."
   },
   "withdraw": {
     "title": "Withdraw your voice",

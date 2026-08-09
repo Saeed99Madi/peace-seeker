@@ -11,6 +11,7 @@ import { ThemeRegistry } from '@/theme/ThemeRegistry';
 import { AppHeader } from '@/components/layout/AppHeader';
 import { AppFooter } from '@/components/layout/AppFooter';
 import { SkipLink } from '@/components/layout/SkipLink';
+import { VoiceQueueFlusher } from '@/components/voice/VoiceQueueFlusher';
 
 /** Every locale is pre-rendered, so the public pages are static and cacheable. */
 export function generateStaticParams() {
@@ -90,6 +91,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <ThemeRegistry locale={locale as Locale}>
             <SkipLink />
+            <VoiceQueueFlusher />
             <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100dvh' }}>
               <AppHeader locale={locale as Locale} />
               <Box component="main" id="main" sx={{ flex: 1 }}>

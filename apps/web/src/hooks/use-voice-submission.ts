@@ -1,88 +1,50 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
-import type { CreateVoiceInput } from '@peace/shared';
-import { apiFetch } from '@/lib/api-client';
+import { useCallback, useState } from 'react';
+import { ApiError, apiFetch } from '@/lib/api-client';
+import { enqueue, type QueuedVoice } from '@/lib/voice-queue';
 
-const QUEUE_KEY = 'peace.voice.queue';
-
-type Status = 'idle' | 'submitting' | 'queued' | 'done' | 'error';
-
-export interface VoicePayload extends CreateVoiceInput {
-  email?: string;
-}
-
-function readQueue(): VoicePayload[] {
-  try {
-    return JSON.parse(localStorage.getItem(QUEUE_KEY) ?? '[]') as VoicePayload[];
-  } catch {
-    return [];
-  }
-}
-
-function writeQueue(items: VoicePayload[]): void {
-  localStorage.setItem(QUEUE_KEY, JSON.stringify(items));
-}
+export type SubmitStatus = 'idle' | 'submitting' | 'queued' | 'done' | 'error';
+export type VoicePayload = QueuedVoice;
 
 /**
- * §7, Offline tolerance — "Voice submission and draft writing queue locally and
- * sync when connectivity returns".
+ * §7, Offline tolerance — a submission is never lost.
  *
- * Someone on an intermittent connection in a conflict zone should not lose what
- * they wrote because the network dropped mid-request. A failed submission is
- * kept on the device and retried when the browser reports it is back online.
+ * Two failures, two answers:
+ *
+ *  - The server answered and refused (a word limit, a rate limit). Retrying
+ *    changes nothing, so the person is told what the server said.
+ *  - The server could not be reached — offline, or down. The words are kept on
+ *    the device, and VoiceQueueFlusher retries them on any page.
+ *
+ * The second case previously required `navigator.onLine` to be false, so a
+ * working network and an unreachable server lost the submission outright.
  */
 export function useVoiceSubmission() {
-  const [status, setStatus] = useState<Status>('idle');
+  const [status, setStatus] = useState<SubmitStatus>('idle');
   const [error, setError] = useState<string | null>(null);
+  const [errorStatus, setErrorStatus] = useState<number | null>(null);
 
-  const send = useCallback(async (payload: VoicePayload) => {
-    await apiFetch('/voices', { method: 'POST', body: payload });
+  const submit = useCallback(async (payload: VoicePayload) => {
+    setStatus('submitting');
+    setError(null);
+    setErrorStatus(null);
+    try {
+      await apiFetch('/voices', { method: 'POST', body: payload });
+      setStatus('done');
+      return 'sent' as const;
+    } catch (caught) {
+      if (caught instanceof ApiError) {
+        setError(caught.message);
+        setErrorStatus(caught.status);
+        setStatus('error');
+        return 'refused' as const;
+      }
+      enqueue(payload);
+      setStatus('queued');
+      return 'queued' as const;
+    }
   }, []);
 
-  const flush = useCallback(async () => {
-    const queued = readQueue();
-    if (queued.length === 0) return;
-
-    const remaining: VoicePayload[] = [];
-    for (const item of queued) {
-      try {
-        await send(item);
-      } catch {
-        remaining.push(item);
-      }
-    }
-    writeQueue(remaining);
-  }, [send]);
-
-  useEffect(() => {
-    void flush();
-    window.addEventListener('online', flush);
-    return () => window.removeEventListener('online', flush);
-  }, [flush]);
-
-  const submit = useCallback(
-    async (payload: VoicePayload) => {
-      setStatus('submitting');
-      setError(null);
-      try {
-        await send(payload);
-        setStatus('done');
-        return 'sent' as const;
-      } catch (caught) {
-        // Offline, or the server is unreachable: keep it rather than lose it.
-        if (!navigator.onLine) {
-          writeQueue([...readQueue(), payload]);
-          setStatus('queued');
-          return 'queued' as const;
-        }
-        setError(caught instanceof Error ? caught.message : 'unknown');
-        setStatus('error');
-        return 'failed' as const;
-      }
-    },
-    [send],
-  );
-
-  return { submit, status, error };
+  return { submit, status, error, errorStatus };
 }
