@@ -68,6 +68,37 @@ export class ModerationService {
   }
 
   /**
+   * Published voices, for the admin panel.
+   *
+   * The queues above list only what is *awaiting* a decision, which left a
+   * published voice unreachable — there was no way to take one down except by
+   * editing the database directly. Anything a moderator may act on has to be
+   * findable in the interface, or the audit trail (M-2) has a hole in it.
+   */
+  async publishedVoices(page: number, pageSize: number) {
+    const where = { status: 'PUBLISHED' as const };
+    const [items, total] = await this.prisma.$transaction([
+      this.prisma.voice.findMany({
+        where,
+        select: {
+          id: true,
+          displayName: true,
+          displayMode: true,
+          country: true,
+          message: true,
+          locale: true,
+          createdAt: true,
+        },
+        orderBy: { createdAt: 'desc' },
+        skip: (page - 1) * pageSize,
+        take: pageSize,
+      }),
+      this.prisma.voice.count({ where }),
+    ]);
+    return { items, page, pageSize, total };
+  }
+
+  /**
    * M-2 — one decision path for every kind of target, recording the rule that
    * was applied. Identical facts must produce identical outcomes regardless of
    * who the speaker is, and the only way to check that later is to log which

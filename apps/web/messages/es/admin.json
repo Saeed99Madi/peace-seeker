@@ -1,0 +1,26 @@
+{
+  "title": "Administración",
+  "intro": "Cada acción aquí se escribe en el registro de auditoría con la regla aplicada. Nada en esta página puede deshacerse en silencio.",
+  "signIn": "Inicia sesión con una cuenta con permisos de moderación para continuar.",
+  "notAllowed": "Esta cuenta no tiene permisos de moderación.",
+  "stats": {
+    "title": "Las cifras de la Fundación",
+    "voices": "Voces",
+    "countries": "Países escuchados",
+    "members": "Miembros",
+    "circles": "Círculos",
+    "cases": "Casos abiertos",
+    "understandings": "Llegaron a un entendimiento"
+  },
+  "voices": {
+    "title": "Voces en el Muro",
+    "link": "Gestionar voces",
+    "intro": "Retirar una voz la quita del Muro y del recuento. No se avisa a la persona, y el registro de tu decisión es permanente.",
+    "empty": "No hay voces publicadas.",
+    "remove": "Retirar",
+    "removing": "Retirando…",
+    "confirm": "¿Retirar esta voz? Sale del Muro y del recuento de inmediato.",
+    "anonymous": "anónima",
+    "reason": "Regla aplicada"
+  }
+}

@@ -4,7 +4,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { useLocale, useTranslations } from 'next-intl';
 import type { VoiceCount } from '@peace/shared';
-import { useLiveVoiceCount } from '@/hooks/use-live-count';
+import { useVoiceStream } from '@/hooks/use-voice-stream';
 
 /**
  * A-4 — the number, kept live.
@@ -18,7 +18,7 @@ import { useLiveVoiceCount } from '@/hooks/use-live-count';
 export function LiveCount({ initial }: { initial: VoiceCount }) {
   const t = useTranslations('voice');
   const locale = useLocale();
-  const count = useLiveVoiceCount(initial);
+  const { count } = useVoiceStream(initial);
   const formatter = new Intl.NumberFormat(locale);
 
   return (
@@ -31,7 +31,10 @@ export function LiveCount({ initial }: { initial: VoiceCount }) {
           fontWeight: 700,
           lineHeight: 0.95,
           letterSpacing: '-0.03em',
-          color: 'primary.dark',
+          // 'main', not 'dark': the dark shade of the palette is a *darker
+          // green*, which on a dark background is the number nearly invisible.
+          // 'main' is the shade that flips with the scheme.
+          color: 'primary.main',
           transition: 'opacity .35s ease',
           '@media (prefers-reduced-motion: reduce)': { transition: 'none' },
         }}

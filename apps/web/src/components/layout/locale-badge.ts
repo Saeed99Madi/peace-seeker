@@ -28,7 +28,7 @@ export interface LocaleBadge {
 
 export const LOCALE_BADGES: Record<Locale, LocaleBadge> = {
   en: { letter: 'A', flag: '🇬🇧', fg: BRAND.olive900, bg: BRAND.olive100 },
-  ar: { letter: 'ع', flag: '🇸🇦', fg: BRAND.gold700, bg: BRAND.gold200 },
+  ar: { letter: 'ع', flag: '🇸🇦', fg: '#5E4620', bg: BRAND.gold200 },
   fr: { letter: 'É', flag: '🇫🇷', fg: '#2F5560', bg: '#D6E6EA' },
   es: { letter: 'Ñ', flag: '🇪🇸', fg: '#7A3B2A', bg: '#F3DCD3' },
 };

@@ -2,7 +2,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { getTranslations } from 'next-intl/server';
 import type { Locale } from '@peace/shared';
-import { fetchVoices } from '@/lib/voices';
+import { fetchVoiceCount, fetchVoices } from '@/lib/voices';
+import { LiveWall } from './LiveWall';
 import { VoiceCard } from './VoiceCard';
 
 /**
@@ -12,7 +13,7 @@ import { VoiceCard } from './VoiceCard';
  */
 export async function VoiceWall({ locale, limit = 24 }: { locale: Locale; limit?: number }) {
   const t = await getTranslations({ locale, namespace: 'voice' });
-  const voices = await fetchVoices(limit);
+  const [voices, count] = await Promise.all([fetchVoices(limit), fetchVoiceCount()]);
 
   if (voices.length === 0) {
     return (
@@ -23,7 +24,10 @@ export async function VoiceWall({ locale, limit = 24 }: { locale: Locale; limit?
   }
 
   return (
-    <Box
+    <>
+      {/* Voices that arrive while this page is open, above the shuffled Wall. */}
+      <LiveWall initialCount={count} />
+      <Box
       sx={{
         display: 'grid',
         gap: 2,
@@ -37,6 +41,7 @@ export async function VoiceWall({ locale, limit = 24 }: { locale: Locale; limit?
       {voices.map((voice) => (
         <VoiceCard key={voice.id} voice={voice} locale={locale} />
       ))}
-    </Box>
+      </Box>
+    </>
   );
 }

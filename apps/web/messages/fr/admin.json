@@ -1,0 +1,26 @@
+{
+  "title": "Administration",
+  "intro": "Chaque action ici est inscrite au journal d'audit avec la règle appliquée. Rien sur cette page ne peut être défait discrètement.",
+  "signIn": "Connectez-vous avec un compte disposant de droits de modération.",
+  "notAllowed": "Ce compte n'a pas de droits de modération.",
+  "stats": {
+    "title": "Les chiffres de la Fondation",
+    "voices": "Voix",
+    "countries": "Pays entendus",
+    "members": "Membres",
+    "circles": "Cercles",
+    "cases": "Dossiers ouverts",
+    "understandings": "Ont abouti à une entente"
+  },
+  "voices": {
+    "title": "Voix sur le Mur",
+    "link": "Gérer les voix",
+    "intro": "Retirer une voix la supprime du Mur et du décompte. La personne n'en est pas informée, et la trace de votre décision est permanente.",
+    "empty": "Aucune voix publiée.",
+    "remove": "Retirer",
+    "removing": "Retrait…",
+    "confirm": "Retirer cette voix ? Elle quitte le Mur et le décompte immédiatement.",
+    "anonymous": "anonyme",
+    "reason": "Règle appliquée"
+  }
+}

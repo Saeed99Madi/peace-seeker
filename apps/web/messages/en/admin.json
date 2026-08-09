@@ -1,0 +1,26 @@
+{
+  "title": "Administration",
+  "intro": "Every action here is written to the audit log with the rule that was applied. Nothing on this page can be undone quietly.",
+  "signIn": "Sign in with an account that has moderation rights to continue.",
+  "notAllowed": "This account does not have moderation rights.",
+  "stats": {
+    "title": "The Foundation's figures",
+    "voices": "Voices",
+    "countries": "Countries heard from",
+    "members": "Members",
+    "circles": "Circles",
+    "cases": "Cases opened",
+    "understandings": "Reached an understanding"
+  },
+  "voices": {
+    "title": "Voices on the Wall",
+    "link": "Manage voices",
+    "intro": "Taking a voice down removes it from the Wall and from the count. The person is not notified, and the record of your decision is permanent.",
+    "empty": "No voices are published.",
+    "remove": "Take down",
+    "removing": "Taking down…",
+    "confirm": "Take this voice down? It leaves the Wall and the count immediately.",
+    "anonymous": "anonymous",
+    "reason": "Rule applied"
+  }
+}

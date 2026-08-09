@@ -38,6 +38,16 @@ export class ModerationController {
     return { items: await this.moderation.queue(query.queue, query.page, query.pageSize) };
   }
 
+  /** Everything currently on the Wall, so it can be acted on. */
+  @Roles('MODERATOR', 'ADMINISTRATOR')
+  @Get('voices')
+  publishedVoices(@Query('page') page = '1', @Query('pageSize') pageSize = '25') {
+    return this.moderation.publishedVoices(
+      Math.max(Number(page) || 1, 1),
+      Math.min(Math.max(Number(pageSize) || 25, 1), 100),
+    );
+  }
+
   @Roles('MODERATOR', 'ADMINISTRATOR')
   @Post('decisions/:targetType/:targetId')
   decide(

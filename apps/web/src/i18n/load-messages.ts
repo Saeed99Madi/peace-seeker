@@ -15,6 +15,7 @@ const NAMESPACES = [
   'community',
   'path',
   'policy',
+  'admin',
 ] as const;
 
 async function loadNamespace(locale: string, namespace: string): Promise<AbstractIntlMessages> {

@@ -55,8 +55,13 @@ export class RedisService implements OnModuleInit, OnModuleDestroy {
     // rather than hanging. A subscriber is the opposite case: it is set up once
     // at boot, before the socket is necessarily open, and its subscribe call
     // should wait rather than throw and take the process down with it.
-    this.sub ??= this.client.duplicate({ enableOfflineQueue: true });
-    this.sub.on('error', () => undefined);
+    if (!this.sub) {
+      this.sub = this.client.duplicate({ enableOfflineQueue: true });
+      // Attached once, with the connection. Attaching it on every call to this
+      // method would add a listener per caller and eventually trip Node's
+      // max-listeners warning — which is how a leak announces itself.
+      this.sub.on('error', () => undefined);
+    }
     return this.sub;
   }
 

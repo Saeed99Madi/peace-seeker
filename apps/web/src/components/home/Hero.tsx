@@ -34,9 +34,12 @@ export async function Hero({ locale }: { locale: Locale }) {
         overflow: 'hidden',
         // Two pools of light, olive and gold, set equidistant from the centre:
         // the mark's own geometry at the scale of the page.
-        backgroundImage: `radial-gradient(58% 62% at 16% 4%, ${BRAND.olive100} 0%, transparent 64%),
-                          radial-gradient(52% 58% at 86% 14%, ${BRAND.gold200} 0%, transparent 66%),
-                          linear-gradient(180deg, ${BRAND.sand100} 0%, ${BRAND.sand50} 78%)`,
+        //
+        // Both schemes are declared in theme/palette.ts. This was once a
+        // hard-coded light gradient, so a reader whose device was in dark mode
+        // got the dark palette's pale text on a pale ground and could not read
+        // the page. Anything painting its own background must answer for both.
+        backgroundImage: 'var(--peace-hero-bg)',
       }}
     >
       <Container maxWidth="md" sx={{ position: 'relative', py: { xs: 8, md: 13 } }}>

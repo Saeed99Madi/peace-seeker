@@ -1,5 +1,5 @@
 import type { ThemeOptions } from '@mui/material/styles';
-import { markVariables } from './palette';
+import { schemeVariables } from './palette';
 import { SURFACE } from './tokens';
 
 /**
@@ -12,8 +12,12 @@ import { SURFACE } from './tokens';
 export const componentDefaults: ThemeOptions['components'] = {
   MuiCssBaseline: {
     styleOverrides: {
-      ':root': markVariables.light,
-      '@media (prefers-color-scheme: dark)': { ':root': markVariables.dark },
+      ':root': schemeVariables.light,
+      // The toggle wins in both directions; the media query covers 'system'.
+      '@media (prefers-color-scheme: dark)': {
+        ':root:not([data-mui-color-scheme="light"])': schemeVariables.dark,
+      },
+      ':root[data-mui-color-scheme="dark"]': schemeVariables.dark,
       '@media (prefers-reduced-motion: reduce)': {
         '*, *::before, *::after': {
           animationDuration: '0.01ms !important',
@@ -61,7 +65,7 @@ export const componentDefaults: ThemeOptions['components'] = {
     defaultProps: { elevation: 0 },
     styleOverrides: {
       root: ({ theme }) => ({
-        border: `1px solid ${theme.palette.divider}`,
+        border: `1px solid ${(theme.vars ?? theme).palette.divider}`,
         borderRadius: SURFACE.radius,
         backgroundImage: 'none',
       }),
@@ -79,7 +83,7 @@ export const componentDefaults: ThemeOptions['components'] = {
   MuiChip: {
     styleOverrides: {
       root: { borderRadius: SURFACE.radiusSmall, fontWeight: 500 },
-      outlined: ({ theme }) => ({ borderColor: theme.palette.divider }),
+      outlined: ({ theme }) => ({ borderColor: (theme.vars ?? theme).palette.divider }),
     },
   },
   MuiPaper: { defaultProps: { elevation: 0 }, styleOverrides: { root: { backgroundImage: 'none' } } },
@@ -88,8 +92,11 @@ export const componentDefaults: ThemeOptions['components'] = {
     defaultProps: { elevation: 0, color: 'transparent' },
     styleOverrides: {
       root: ({ theme }) => ({
-        borderBottom: `1px solid ${theme.palette.divider}`,
-        backgroundColor: theme.palette.background.default,
+        // (theme.vars ?? theme) is required wherever cssVariables is enabled:
+        // theme.palette.* would freeze the light value into the stylesheet, and
+        // the header would stay light while the text went pale in dark mode.
+        borderBottom: `1px solid ${(theme.vars ?? theme).palette.divider}`,
+        backgroundColor: (theme.vars ?? theme).palette.background.default,
         backdropFilter: 'saturate(140%) blur(8px)',
       }),
     },

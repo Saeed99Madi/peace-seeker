@@ -5,6 +5,8 @@ import { RedisService } from '../../redis/redis.service';
 
 /** The channel the live counter listens on. */
 export const VOICE_COUNT_CHANNEL = 'voices:count';
+/** A newly published voice, in its public form. */
+export const VOICE_ARRIVED_CHANNEL = 'voices:arrived';
 
 const CACHE_KEY = 'voices:count';
 const CACHE_TTL_SECONDS = 15;

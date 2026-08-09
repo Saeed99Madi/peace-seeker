@@ -5,7 +5,8 @@ import { PrismaService } from '../../prisma/prisma.service';
 import { MailService } from '../../mail/mail.service';
 import { generateToken, tokenHash } from '../../common/utils/hash.util';
 import { seededShuffle } from '../../common/utils/shuffle.util';
-import { VoiceCounterService } from './voice-counter.service';
+import { VOICE_ARRIVED_CHANNEL, VoiceCounterService } from './voice-counter.service';
+import { RedisService } from '../../redis/redis.service';
 import { toPublicVoice, type PublicVoiceDto } from './voice.mapper';
 
 export interface SubmitContext {
@@ -24,6 +25,7 @@ export class VoiceService {
     private readonly counter: VoiceCounterService,
     private readonly mail: MailService,
     private readonly config: ConfigService,
+    private readonly redis: RedisService,
   ) {}
 
   /**
@@ -59,7 +61,22 @@ export class VoiceService {
       select: { id: true, country: true },
     });
 
-    if (status === 'PUBLISHED') await this.counter.adjust(1, voice.country);
+    if (status === 'PUBLISHED') {
+      await this.counter.adjust(1, voice.country);
+      // Announce the voice itself, so the Wall can show it arriving. Only the
+      // public projection is sent — the same fields the Wall already serves to
+      // anyone (A-5), never the submitter, the address hash or the token.
+      const published = await this.prisma.voice.findUnique({
+        where: { id: voice.id },
+        include: { media: true },
+      });
+      if (published) {
+        await this.redis.publish(
+          VOICE_ARRIVED_CHANNEL,
+          toPublicVoice(published, `${this.config.get<string>('apiPublicUrl')}/media`),
+        );
+      }
+    }
     if (context.email) await this.sendWithdrawalLink(context.email, withdrawalToken, context.locale);
 
     return { id: voice.id };
