@@ -67,6 +67,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # gitleaks diffs a commit range, and the default shallow checkout
+          # gives it none: it scanned zero bytes, reported no leaks, and exited
+          # 1 — a secret scan that passes because it looked at nothing is worse
+          # than no secret scan. Full history is also the scan worth having.
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
