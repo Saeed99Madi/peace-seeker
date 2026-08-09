@@ -41,6 +41,7 @@ function ArrivedCard({ voice, index }: { voice: PublicVoice; index: number }) {
       component="article"
       sx={{
         height: '100%',
+        display: 'flex',
         borderColor: 'secondary.main',
         animation: 'peaceArrive .9s cubic-bezier(.16,1,.3,1) both',
         animationDelay: `${Math.min(index, 6) * 70}ms`,
@@ -57,18 +58,20 @@ function ArrivedCard({ voice, index }: { voice: PublicVoice; index: number }) {
         },
       }}
     >
-      <CardContent>
-        <Stack spacing={1.5}>
+      <CardContent sx={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
+        <Stack spacing={1.5} sx={{ flex: 1 }}>
           {voice.message ? (
             <Typography lang={shown} dir={getDirection(shown)} sx={{ whiteSpace: 'pre-wrap' }}>
               {voice.message}
             </Typography>
           ) : null}
-          <Typography variant="caption" color="text.secondary">
-            {attribution}
-            {place && voice.attribution.kind !== 'anonymousFromCountry' ? ` · ${place}` : ''}
-          </Typography>
         </Stack>
+        {/* Pinned to the foot, exactly as on the Wall beneath: an arriving
+            voice must not be laid out differently from a settled one. */}
+        <Typography variant="caption" color="text.secondary" sx={{ pt: 2 }}>
+          {attribution}
+          {place && voice.attribution.kind !== 'anonymousFromCountry' ? ` · ${place}` : ''}
+        </Typography>
       </CardContent>
     </Card>
   );

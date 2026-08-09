@@ -51,11 +51,5 @@
   },
   "oneCountry": {
     "eyebrow": "Un solo país"
-  },
-  "field": {
-    "said": "<n>{count}</n> personas lo han dicho aquí: necesitamos la paz.",
-    "empty": "Nadie lo ha dicho aquí todavía. Podrías ser la primera persona.",
-    "caption": "Una marca, una persona. La más reciente no se distingue de la primera.",
-    "capped": "Se muestran {shown} marcas de {count} voces."
   }
 }

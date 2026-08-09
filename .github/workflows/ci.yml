@@ -78,3 +78,64 @@ jobs:
       - uses: gitleaks/gitleaks-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # Every commit on main that passes the checks above goes to production.
+  # Nothing deploys from a pull request, and nothing deploys that did not build,
+  # typecheck, pass its tests, survive `npm audit --audit-level=high` and clear
+  # the secret scan — the gate is the point of deploying from here rather than
+  # letting Railway watch the branch itself.
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    needs: [verify, security]
+    runs-on: ubuntu-latest
+    concurrency:
+      group: deploy-production
+      cancel-in-progress: false
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm i -g @railway/cli
+
+      # The API first. The web app is server-rendered against it, so if a
+      # release changes both, the one that answers should be up before the one
+      # that asks.
+      - name: Deploy API
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+        run: railway up --service @peace/api --environment production --ci -m "${{ github.event.head_commit.message }}"
+
+      - name: Deploy web
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+        run: railway up --service @peace/web --environment production --ci -m "${{ github.event.head_commit.message }}"
+
+      # A green build is not a working site. This fails the run if the release
+      # is not actually answering, so a broken deploy is visible here rather
+      # than discovered by a reader.
+      - name: Smoke test production
+        run: |
+          set -euo pipefail
+          api=https://api.peace-seekers.com/api/health/ready
+          web=https://peace-seekers.com/en
+
+          for attempt in $(seq 1 30); do
+            body=$(curl -fsS --max-time 10 "$api" 2>/dev/null || true)
+            code=$(curl -o /dev/null -s -w '%{http_code}' --max-time 10 "$web" || true)
+            if [ -n "$body" ] && [ "$code" = "200" ]; then
+              echo "$body"
+              # /health/ready, not /health: the shallow one answers "ok" from a
+              # process that cannot reach Postgres, and an API in that state
+              # serves an empty Wall — which looks like a working site.
+              echo "$body" | grep -q '"database":"ok"' \
+                && echo "$body" | grep -q '"cache":"ok"' \
+                && { echo "production healthy after ${attempt} attempt(s)"; exit 0; }
+            fi
+            echo "attempt ${attempt}: api=$(echo "${body:-none}" | head -c 60) web=${code}"
+            sleep 10
+          done
+
+          echo "::error::production did not come back healthy within 5 minutes"
+          exit 1

@@ -7,12 +7,10 @@ import { ButtonLink } from '@/components/common/ButtonLink';
 import { Section } from '@/components/common/Section';
 import { Hero } from '@/components/home/Hero';
 import { OneCountryBand } from '@/components/home/OneCountryBand';
-import { PeaceField } from '@/components/home/PeaceField';
 import { Photo } from '@/components/common/Photo';
 import { SymmetryDemo } from '@/components/home/SymmetryDemo';
 import { VisionThread } from '@/components/home/VisionThread';
 import { VoiceWall } from '@/components/voice/VoiceWall';
-import { fetchVoiceCount } from '@/lib/voices';
 import { pageMetadata } from '@/lib/site';
 import { RHYTHM } from '@/theme/tokens';
 
@@ -30,14 +28,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'home' });
   const voice = await getTranslations({ locale, namespace: 'voice' });
-  const count = await fetchVoiceCount();
 
   return (
     <>
       <Hero locale={locale as Locale} />
-
-      {/* The hero states the number; this makes it people. Same socket. */}
-      <PeaceField initial={count} />
 
       <VisionThread locale={locale as Locale} />
 

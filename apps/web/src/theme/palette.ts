@@ -74,8 +74,6 @@ export const schemeVariables = {
     '--peace-hero-bg': `radial-gradient(58% 62% at 16% 4%, ${BRAND.olive100} 0%, transparent 64%),
       radial-gradient(52% 58% at 86% 14%, ${BRAND.gold200} 0%, transparent 66%),
       linear-gradient(180deg, ${BRAND.sand100} 0%, ${BRAND.sand50} 78%)`,
-    '--peace-field-bg': `radial-gradient(70% 120% at 50% 0%, ${BRAND.olive100}66 0%, transparent 70%),
-      linear-gradient(180deg, ${BRAND.sand50} 0%, ${BRAND.sand100} 100%)`,
   },
   dark: {
     '--peace-mark-ring': BRAND.olive300,
@@ -85,8 +83,6 @@ export const schemeVariables = {
     '--peace-hero-bg': `radial-gradient(58% 62% at 16% 4%, ${BRAND.olive900} 0%, transparent 64%),
       radial-gradient(52% 58% at 86% 14%, ${BRAND.gold700}55 0%, transparent 66%),
       linear-gradient(180deg, ${BRAND.night800} 0%, ${BRAND.night900} 78%)`,
-    '--peace-field-bg': `radial-gradient(70% 120% at 50% 0%, ${BRAND.olive900}99 0%, transparent 70%),
-      linear-gradient(180deg, ${BRAND.night900} 0%, ${BRAND.night800} 100%)`,
   },
 } as const;
 

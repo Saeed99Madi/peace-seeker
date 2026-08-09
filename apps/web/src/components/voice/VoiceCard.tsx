@@ -33,9 +33,13 @@ export async function VoiceCard({ voice, locale }: { voice: PublicVoice; locale:
   const messageLocale = isLocale(voice.locale) ? voice.locale : locale;
 
   return (
-    <Card component="article" sx={{ height: '100%' }}>
-      <CardContent>
-        <Stack spacing={1.5}>
+    // The card fills its grid row, and the attribution is pinned to the foot of
+    // it rather than left trailing the text. A row is as tall as its longest
+    // voice, so without this the names sit at six different heights and the
+    // wall reads as ragged — and a short voice looks like an unfinished one.
+    <Card component="article" sx={{ height: '100%', display: 'flex' }}>
+      <CardContent sx={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
+        <Stack spacing={1.5} sx={{ flex: 1 }}>
           {voice.message ? (
             <Typography
               variant="body1"
@@ -54,11 +58,15 @@ export async function VoiceCard({ voice, locale }: { voice: PublicVoice; locale:
             <video controls preload="none" src={voice.mediaUrl} style={{ width: '100%' }} />
           ) : null}
 
-          <Typography variant="caption" color="text.secondary">
-            {attribution}
-            {place && voice.attribution.kind !== 'anonymousFromCountry' ? ` · ${place}` : ''}
-          </Typography>
         </Stack>
+
+        {/* A sibling of the Stack, not a child of it: Stack sets the margin on
+            its own children, which would override the auto margin that does
+            the pinning. */}
+        <Typography variant="caption" color="text.secondary" sx={{ pt: 2 }}>
+          {attribution}
+          {place && voice.attribution.kind !== 'anonymousFromCountry' ? ` · ${place}` : ''}
+        </Typography>
       </CardContent>
     </Card>
   );
