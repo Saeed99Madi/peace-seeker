@@ -13,6 +13,31 @@ Foundation may wish to add photographer names before launch (see below).
 | `reach.jpg` | `images.unsplash.com/photo-1695049761557-cb56d348c297` | The Path / symmetry section |
 | `offer.jpg` | `images.unsplash.com/photo-1447619297994-b829cc1ab44a` | Membership closing band |
 
+## The charter's three (duotone)
+
+These are separate from the four above: they are used only on `/charter`, they
+are never shown in full colour, and they were chosen so that words could be set
+on them. All three are **CC0 / public domain**, so no attribution is required —
+it is recorded here because knowing where a picture came from is part of being
+able to replace it.
+
+| File | Source | Licence | Credit | Used for |
+|---|---|---|---|---|
+| `horizon.jpg` | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Calm-sea-haleiwa_(Unsplash).jpg) | CC0 | Jeremy Bishop | "Peace" — a level horizon |
+| `path.jpg` | [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=61777935) | CC0 | Alice Donovan Rouse | "Membership" — a path anyone may walk |
+| `reflection.jpg` | [WordPress Photos](https://wordpress.org/photos/photo/2516a11cf5/) | CC0 | Bibek KC | "How this becomes a platform" — symmetry |
+
+All three were found through the [Openverse](https://openverse.org) and
+Wikimedia Commons APIs filtered to CC0 and public-domain only.
+
+**Duotone.** They are mapped onto the olive-to-cream ramp at build time
+(`duotone()` in `scripts/optimize-photos.mjs`) rather than shown as they were
+shot. A full-colour stock photograph always looks like a full-colour stock
+photograph dropped into a page; collapsed onto two brand colours it becomes
+part of the same drawing as the mark and the type, and text can be set on it.
+It also costs a fraction of the bytes: the horizon is 12 KB at its largest AVIF
+against 113 KB for the full-colour olive.
+
 **To add photographer credit:** request an Unsplash API key and call
 `GET /photos/:id` for each image, or open the photo page on unsplash.com and
 copy the name. Add it to the caption slot in `Photo.tsx`.

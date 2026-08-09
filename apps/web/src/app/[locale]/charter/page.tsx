@@ -31,8 +31,6 @@ export default async function CharterPage({ params }: { params: Promise<{ locale
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'charter' });
-  // The alt text lives with the photographs, which are shared with the home page.
-  const photo = await getTranslations({ locale, namespace: 'home' });
 
   return (
     <>
@@ -41,8 +39,8 @@ export default async function CharterPage({ params }: { params: Promise<{ locale
       <Container maxWidth="lg" sx={{ pb: 8 }}>
         <Stack spacing={5}>
           <CharterAside
-            photo="olive"
-            alt={photo('photos.olive.alt')}
+            photo="horizon"
+            alt={t('photos.peace.alt')}
             caption={t('photos.peace.caption')}
           >
             <Stack spacing={2}>
@@ -66,8 +64,8 @@ export default async function CharterPage({ params }: { params: Promise<{ locale
           <Divider />
 
           <CharterAside
-            photo="offer"
-            alt={photo('photos.offer.alt')}
+            photo="path"
+            alt={t('photos.membership.alt')}
             caption={t('photos.membership.caption')}
             flip
           >
@@ -84,8 +82,8 @@ export default async function CharterPage({ params }: { params: Promise<{ locale
           <Divider />
 
           <CharterAside
-            photo="reach"
-            alt={photo('photos.reach.alt')}
+            photo="reflection"
+            alt={t('photos.principles.alt')}
             caption={t('photos.principles.caption')}
           >
             <Stack spacing={4}>

@@ -52,6 +52,39 @@ export const PHOTOS = {
       1800
     ],
     "blurDataUrl": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABQBACdASoUAA4APu1kqU2ppaQiMAgBMB2JYwC7Ef/gPI+zgIk3ErkaaPAAAP7wxHkZa2j9jWnAbn0NQBbZavyqi8iRDq864LFK5uWGJji7sq6ij2i2swqqdyJyNFv+DVl5P0AqyGXzIR+iUiHgjZScwAA="
+  },
+  "horizon": {
+    "aspect": 0.8,
+    "meaning": "A level horizon: the one line with nothing above anything.",
+    "widths": [
+      480,
+      768,
+      1200,
+      1800
+    ],
+    "blurDataUrl": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACQAwCdASoUAA0APu1iqk2ppaQiMAgBMB2JZQAATu6eTCRwX90AAPFGX0OpISBL7HrzEnaOF25P7cchweD4FXBISCRIebvNlwpJkIHW3TA4/wfN+94U0zvIHsgAAA=="
+  },
+  "path": {
+    "aspect": 0.8,
+    "meaning": "A path anyone may walk. No gate and no one at it.",
+    "widths": [
+      480,
+      768,
+      1200,
+      1800
+    ],
+    "blurDataUrl": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JZQC7ACKfCI/9mK2JWAD+36Dpba7x/sbRXnwwlRnQRuh65NdiuqqfKyMCz883kqhLVAQ2fM4UfYVlpAJqqdKAzLkPBAwv9Rt1eajEAAA="
+  },
+  "reflection": {
+    "aspect": 0.8,
+    "meaning": "Still water: whatever one side has, the other has exactly.",
+    "widths": [
+      480,
+      768,
+      1200,
+      1800
+    ],
+    "blurDataUrl": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JZwAAYXQOimtm40xSZ9wAAP6N32Tv1mnGoNiSezmldunZiKAtKcgcdFyJaRI+Uiz2XAFQrcxJz5/LNYmZJtKymsmm2FSR7ZTQbO66iNRKAvRgAAA="
   }
 } as const satisfies Record<string, PhotoAsset>;
 

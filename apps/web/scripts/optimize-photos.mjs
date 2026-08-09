@@ -23,7 +23,40 @@ const PHOTOS = [
   { name: 'earth', aspect: 16 / 9, meaning: '"The whole world is one country."' },
   { name: 'reach', aspect: 3 / 2, meaning: 'Two parties reaching; neither reaching further.' },
   { name: 'offer', aspect: 3 / 2, meaning: 'Open hands: what each party is willing to give.' },
+  // The charter's three, in duotone. They are read behind the words rather
+  // than beside them, and a full-colour photograph under text is a photograph
+  // fighting the text.
+  { name: 'horizon', aspect: 4 / 5, duotone: true, meaning: 'A level horizon: the one line with nothing above anything.' },
+  { name: 'path', aspect: 4 / 5, duotone: true, meaning: 'A path anyone may walk. No gate and no one at it.' },
+  { name: 'reflection', aspect: 4 / 5, duotone: true, meaning: 'Still water: whatever one side has, the other has exactly.' },
 ];
+
+/**
+ * Duotone, mapping the whole tonal range onto two brand colours.
+ *
+ * A stock photograph in full colour always looks like a stock photograph
+ * dropped into a page. Collapsed onto the olive-to-cream ramp it stops being a
+ * picture of a place and becomes part of the same drawing as everything else —
+ * and text can sit on it, which is the whole point of these three.
+ *
+ * linear() is a per-channel affine map, so shadow + grey x (highlight - shadow)
+ * is exactly one pass: no LUT, no compositing, no second decode.
+ */
+const SHADOW = [0x24, 0x2c, 0x1f];   // just under olive950
+const HIGHLIGHT = [0xf7, 0xef, 0xdc]; // sand50 warmed towards gold200
+
+const duotone = async (pipeline) => {
+  // Two passes, because greyscale() collapses the image to one band and sharp
+  // will not expand bands inside linear(). Re-decoding the grey as PNG is the
+  // cheapest way to get three channels back, and this runs at build time only.
+  const grey = await pipeline.greyscale().normalise().png().toBuffer();
+  return sharp(grey)
+    .toColourspace('srgb')
+    .linear(
+      HIGHLIGHT.map((hi, i) => (hi - SHADOW[i]) / 255),
+      SHADOW,
+    );
+};
 
 /**
  * One treatment across every photo, so a page of them reads as one set rather
@@ -44,7 +77,8 @@ async function build() {
 
     for (const width of WIDTHS) {
       if (width > (meta.width ?? 0)) continue;
-      const resized = cohere(sharp(source).resize({ width, withoutEnlargement: true }));
+      const scaled = sharp(source).resize({ width, withoutEnlargement: true });
+      const resized = photo.duotone ? await duotone(scaled) : cohere(scaled);
 
       const avif = await resized.clone().avif({ quality: 52, effort: 6 }).toBuffer();
       const webp = await resized.clone().webp({ quality: 72 }).toBuffer();
@@ -57,7 +91,10 @@ async function build() {
 
     // A 20px blur, inlined, so the layout never jumps and something is on
     // screen immediately on a slow connection.
-    const blur = await cohere(sharp(source).resize({ width: 20 })).webp({ quality: 40 }).toBuffer();
+    const small = sharp(source).resize({ width: 20 });
+    const blur = await (photo.duotone ? await duotone(small) : cohere(small))
+      .webp({ quality: 40 })
+      .toBuffer();
 
     manifest[photo.name] = {
       aspect: photo.aspect,

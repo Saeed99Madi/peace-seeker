@@ -43,13 +43,16 @@
   "translationNote": "Cada traducción de este texto la revisa un traductor humano. Nunca se traduce automáticamente.",
   "photos": {
     "peace": {
-      "caption": "El olivo del emblema. Aquí la paz es algo vivo, no la señal de algo."
+      "caption": "Un horizonte es la única línea donde nada está por encima de nada. Ni opresor ni oprimido.",
+      "alt": "Un horizonte nivelado: agua en calma y el cielo encima"
     },
     "membership": {
-      "caption": "Manos abiertas. Todo lo que se pide es lo que estés dispuesto a traer; nada sobre quién eres."
+      "caption": "Un sendero que cualquiera puede recorrer. Aquí no hay puerta, ni nadie ante ella.",
+      "alt": "Un sendero estrecho abierto en la hierba, que se aleja"
     },
     "principles": {
-      "caption": "Dos manos que se tienden la una hacia la otra, y ninguna llega más lejos que la otra."
+      "caption": "El agua quieta devuelve exactamente lo que recibe. Lo que obtiene una parte, lo obtiene la otra.",
+      "alt": "Una montaña y su reflejo exacto en agua quieta"
     }
   }
 }

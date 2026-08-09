@@ -43,13 +43,16 @@
   "translationNote": "Chaque traduction de ce texte est revue par un traducteur humain. Elle n'est jamais traduite automatiquement.",
   "photos": {
     "peace": {
-      "caption": "L'olivier de l'emblème. Ici la paix est une chose vivante, non le signe d'une chose."
+      "caption": "Un horizon est la seule ligne où rien n'est au-dessus de rien. Ni oppresseur ni opprimé.",
+      "alt": "Un horizon de niveau : une eau calme, et le ciel au-dessus"
     },
     "membership": {
-      "caption": "Des mains ouvertes. Tout ce qui est demandé, c'est ce que vous acceptez d'apporter — rien sur qui vous êtes."
+      "caption": "Un sentier que chacun peut emprunter. Il n'y a pas de portail, et personne devant.",
+      "alt": "Un sentier étroit tracé dans l'herbe, qui s'éloigne"
     },
     "principles": {
-      "caption": "Deux mains tendues l'une vers l'autre, et aucune ne va plus loin que l'autre."
+      "caption": "L'eau calme rend exactement ce qu'on lui donne. Ce qu'obtient une partie, l'autre l'obtient.",
+      "alt": "Une montagne et son reflet exact dans une eau immobile"
     }
   }
 }

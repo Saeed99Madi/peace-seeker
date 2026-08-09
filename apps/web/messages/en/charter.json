@@ -43,13 +43,16 @@
   "translationNote": "Every translation of this text is reviewed by a human translator. It is never machine-translated.",
   "photos": {
     "peace": {
-      "caption": "The olive of the mark. Peace here is a living thing, not a sign of one."
+      "caption": "A horizon is the one line with nothing above anything. No oppressor and no oppressed.",
+      "alt": "A level horizon: still water, and sky above it"
     },
     "membership": {
-      "caption": "Open hands. The whole requirement is what you are willing to bring — nothing about who you are."
+      "caption": "A path anyone may walk. There is no gate here, and nobody standing at it.",
+      "alt": "A narrow path worn through open grass, leading away"
     },
     "principles": {
-      "caption": "Two reaching toward one another, and neither reaching further than the other."
+      "caption": "Still water gives back exactly what it is given. Whatever one party gets, the other gets.",
+      "alt": "A mountain and its exact reflection in still water"
     }
   }
 }
