@@ -80,10 +80,17 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   # Every commit on main that passes the checks above goes to production.
-  # Nothing deploys from a pull request, and nothing deploys that did not build,
-  # typecheck, pass its tests, survive `npm audit --audit-level=high` and clear
-  # the secret scan — the gate is the point of deploying from here rather than
-  # letting Railway watch the branch itself.
+  #
+  # Railway is also connected to this repository and deploys main by itself, so
+  # today that requirement is already met — but it deploys whatever is pushed,
+  # tests or no tests. Deploying from here instead puts the build, the
+  # typecheck, the tests, `npm audit --audit-level=high` and the secret scan in
+  # front of production, which is the whole reason to do it from CI.
+  #
+  # Until RAILWAY_TOKEN exists the deploy steps skip and Railway's own
+  # integration keeps shipping, so adding this file changed nothing and broke
+  # nothing. Once the token is set, turn Railway's automatic deploy off in the
+  # service settings — otherwise every push deploys twice.
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     needs: [verify, security]
@@ -94,27 +101,43 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Is a deploy token configured?
+        id: guard
+        env:
+          TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+        run: |
+          if [ -z "${TOKEN}" ]; then
+            echo 'configured=false' >> "$GITHUB_OUTPUT"
+            echo '::notice::RAILWAY_TOKEN is not set — leaving this commit to Railway'"'"'s own GitHub integration.'
+          else
+            echo 'configured=true' >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/setup-node@v4
+        if: steps.guard.outputs.configured == 'true'
         with:
           node-version: 22
       - run: npm i -g @railway/cli
+        if: steps.guard.outputs.configured == 'true'
 
       # The API first. The web app is server-rendered against it, so if a
       # release changes both, the one that answers should be up before the one
       # that asks.
       - name: Deploy API
+        if: steps.guard.outputs.configured == 'true'
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
         run: railway up --service @peace/api --environment production --ci -m "${{ github.event.head_commit.message }}"
 
       - name: Deploy web
+        if: steps.guard.outputs.configured == 'true'
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
         run: railway up --service @peace/web --environment production --ci -m "${{ github.event.head_commit.message }}"
 
-      # A green build is not a working site. This fails the run if the release
-      # is not actually answering, so a broken deploy is visible here rather
-      # than discovered by a reader.
+      # Runs either way — whoever deployed this commit, the question is whether
+      # production is answering. A green build is not a working site.
       - name: Smoke test production
         run: |
           set -euo pipefail
