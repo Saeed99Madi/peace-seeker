@@ -1,4 +1,4 @@
-# Peace Seekers — Peace Everywhere Foundation
+# Peace Seekers — Peace Everywhere
 
 > **Peace — its meaning and its foundation is the lifting of injustice.**
 > Submission to peace: no oppressor and no oppressed.

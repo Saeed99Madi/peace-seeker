@@ -1,7 +1,7 @@
 {
   "brand": {
     "name": "Peace Seekers",
-    "foundation": "Peace Everywhere Foundation",
+    "foundation": "Peace Everywhere",
     "tagline": "Peace is the lifting of injustice."
   },
   "nav": {
@@ -39,7 +39,7 @@
     "noTracking": "No advertising, no trackers, no analytics that identify you.",
     "transparency": "Transparency policy",
     "privacy": "Privacy",
-    "contact": "Contact the Foundation"
+    "contact": "Contact us"
   },
   "errors": {
     "generic": "Something went wrong. Please try again.",

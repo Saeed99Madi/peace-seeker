@@ -40,5 +40,16 @@
       "body": "La plateforme est mondiale dès le premier jour : quatre langues au lancement, une prise en charge complète de l'écriture de droite à gauche, et aucune langue traitée comme l'originale dont les autres seraient la traduction."
     }
   },
-  "translationNote": "Chaque traduction de ce texte est revue par un traducteur humain. Elle n'est jamais traduite automatiquement."
+  "translationNote": "Chaque traduction de ce texte est revue par un traducteur humain. Elle n'est jamais traduite automatiquement.",
+  "photos": {
+    "peace": {
+      "caption": "L'olivier de l'emblème. Ici la paix est une chose vivante, non le signe d'une chose."
+    },
+    "membership": {
+      "caption": "Des mains ouvertes. Tout ce qui est demandé, c'est ce que vous acceptez d'apporter — rien sur qui vous êtes."
+    },
+    "principles": {
+      "caption": "Deux mains tendues l'une vers l'autre, et aucune ne va plus loin que l'autre."
+    }
+  }
 }

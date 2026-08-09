@@ -1,7 +1,7 @@
 {
   "brand": {
     "name": "Buscadores de paz",
-    "foundation": "Fundación Paz en Todas Partes",
+    "foundation": "Paz en Todas Partes",
     "tagline": "La paz es el levantamiento de la injusticia."
   },
   "nav": {
@@ -39,7 +39,7 @@
     "noTracking": "Sin publicidad, sin rastreadores, sin analíticas que te identifiquen.",
     "transparency": "Política de transparencia",
     "privacy": "Privacidad",
-    "contact": "Contactar con la Fundación"
+    "contact": "Contactar con nosotros"
   },
   "errors": {
     "generic": "Algo ha salido mal. Inténtalo de nuevo.",

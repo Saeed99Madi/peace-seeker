@@ -40,5 +40,16 @@
       "body": "La plataforma es global desde el primer día: cuatro idiomas en el lanzamiento, soporte completo de derecha a izquierda, y ningún idioma tratado como el verdadero del que los demás son traducción."
     }
   },
-  "translationNote": "Cada traducción de este texto la revisa un traductor humano. Nunca se traduce automáticamente."
+  "translationNote": "Cada traducción de este texto la revisa un traductor humano. Nunca se traduce automáticamente.",
+  "photos": {
+    "peace": {
+      "caption": "El olivo del emblema. Aquí la paz es algo vivo, no la señal de algo."
+    },
+    "membership": {
+      "caption": "Manos abiertas. Todo lo que se pide es lo que estés dispuesto a traer; nada sobre quién eres."
+    },
+    "principles": {
+      "caption": "Dos manos que se tienden la una hacia la otra, y ninguna llega más lejos que la otra."
+    }
+  }
 }

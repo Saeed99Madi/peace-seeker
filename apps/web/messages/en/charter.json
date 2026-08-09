@@ -40,5 +40,16 @@
       "body": "The platform is global from its first day: four languages at launch, full right-to-left support, and no language treated as the real one that the others translate."
     }
   },
-  "translationNote": "Every translation of this text is reviewed by a human translator. It is never machine-translated."
+  "translationNote": "Every translation of this text is reviewed by a human translator. It is never machine-translated.",
+  "photos": {
+    "peace": {
+      "caption": "The olive of the mark. Peace here is a living thing, not a sign of one."
+    },
+    "membership": {
+      "caption": "Open hands. The whole requirement is what you are willing to bring — nothing about who you are."
+    },
+    "principles": {
+      "caption": "Two reaching toward one another, and neither reaching further than the other."
+    }
+  }
 }

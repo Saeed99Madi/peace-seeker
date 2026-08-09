@@ -1,7 +1,7 @@
 {
   "brand": {
     "name": "Chercheurs de paix",
-    "foundation": "Fondation La paix partout",
+    "foundation": "La paix partout",
     "tagline": "La paix, c'est la levée de l'injustice."
   },
   "nav": {
@@ -39,7 +39,7 @@
     "noTracking": "Aucune publicité, aucun traceur, aucune statistique qui vous identifie.",
     "transparency": "Politique de transparence",
     "privacy": "Confidentialité",
-    "contact": "Contacter la Fondation"
+    "contact": "Nous contacter"
   },
   "errors": {
     "generic": "Une erreur s'est produite. Veuillez réessayer.",
