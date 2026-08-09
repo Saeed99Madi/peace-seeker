@@ -15,7 +15,16 @@
     "religionAndScience": "Religion and science complete one another.",
     "humanity": "Humanity is the goal.",
     "oneCountry": "The whole world is one country.",
-    "shortLife": "Life is short, and we live only once — so why not live it in peace?"
+    "shortLife": "Life is short, and we live only once — so why not live it in peace?",
+    "alt": {
+      "creation": "The Pillars of Creation: columns of gas and dust where stars are forming",
+      "nerveCell": "Purkinje neurons under a microscope, their dendrites branching like trees",
+      "purpose": "A lattice of scaffolding against the sky, something still being built",
+      "religionAndScience": "A nautilus shell cut open, its chambers in a logarithmic spiral",
+      "humanity": "A murmuration: thousands of birds turning as one body",
+      "oneCountry": "Earthrise: the Earth above the horizon of the Moon, no border visible",
+      "shortLife": "A dandelion clock, every seed still on it"
+    }
   },
   "membership": {
     "heading": "Membership",

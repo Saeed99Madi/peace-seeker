@@ -15,7 +15,16 @@
     "religionAndScience": "La religion et la science se complètent.",
     "humanity": "L'humanité est le but.",
     "oneCountry": "Le monde entier est un seul pays.",
-    "shortLife": "La vie est brève, et nous ne la vivons qu'une fois — pourquoi ne pas la vivre en paix ?"
+    "shortLife": "La vie est brève, et nous ne la vivons qu'une fois — pourquoi ne pas la vivre en paix ?",
+    "alt": {
+      "creation": "Les Piliers de la création : des colonnes de gaz et de poussière où naissent les étoiles",
+      "nerveCell": "Des neurones de Purkinje au microscope, leurs dendrites ramifiées comme des arbres",
+      "purpose": "Un treillis d'échafaudages sur le ciel, quelque chose encore en construction",
+      "religionAndScience": "Un nautile ouvert, ses loges en spirale logarithmique",
+      "humanity": "Une murmuration : des milliers d'oiseaux tournant comme un seul corps",
+      "oneCountry": "Lever de Terre : la Terre au-dessus de l'horizon lunaire, aucune frontière visible",
+      "shortLife": "Une aigrette de pissenlit, toutes ses graines encore en place"
+    }
   },
   "membership": {
     "heading": "L'adhésion",

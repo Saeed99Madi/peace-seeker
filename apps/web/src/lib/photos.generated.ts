@@ -85,6 +85,73 @@ export const PHOTOS = {
       1800
     ],
     "blurDataUrl": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JZwAAYXQOimtm40xSZ9wAAP6N32Tv1mnGoNiSezmldunZiKAtKcgcdFyJaRI+Uiz2XAFQrcxJz5/LNYmZJtKymsmm2FSR7ZTQbO66iNRKAvRgAAA="
+  },
+  "vision-creation": {
+    "aspect": 0.8,
+    "meaning": "The Pillars of Creation: matter becoming stars.",
+    "widths": [
+      480,
+      768
+    ],
+    "blurDataUrl": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAABwBACdASoUABkAPu1qrVEppaQiqAqpMB2JZwAAI4i6yN9o2iSKS3xBveykNAD+3GoMMtq9MBd2oVfFz0OAIgY2yhql/HZr9206ygnd4ns0g696ozixYuG14PggumbJtFVpFsDvN7quZjHiBkrNWCwwPT0DTQAA"
+  },
+  "vision-nerveCell": {
+    "aspect": 0.8,
+    "meaning": "Purkinje neurons, the branching the statement is about.",
+    "widths": [
+      480,
+      768,
+      1200
+    ],
+    "blurDataUrl": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAAAwBQCdASoUABkAPu1sq1EppaOiqAqpMB2JZwAD5UEaeg9J20Ui09iXBiql1YVfApDMAAD9nXWuzwIzCGHZUCzNtD7mAx0wijslsYxQQfGYEnPjhu5ZDnWnO5xSC/knl9NvuZk5z7l6AXDtprk86F5G51c8L3PK1SzGnTrC0Q9yNLu0nkf/rxXEExA201gTV5VOfUqoyAuhOYMN2dyieFdy8uZqBWbAA4nZEQR2P2/SVPHggukIAA=="
+  },
+  "vision-purpose": {
+    "aspect": 0.8,
+    "meaning": "Scaffolding: the universe still being built.",
+    "widths": [
+      480,
+      768,
+      1200,
+      1800
+    ],
+    "blurDataUrl": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAADwBACdASoUABkAPu1qrVCppaQiqAqpMB2JZwDO7BEcZn14tel546mc7WSIejWgC/AA/sOR6da0cDJ9u/yMEsa2DG44RWsWVKYOLe6XoWoHLbjUueSVdyVuntMqcISu7WL0PHRVAy6280g2Yp0IdAsOb2WPZ/gFc7RvPdEdPQmyKqWCp+npKAdw4uCrpXxgAAA="
+  },
+  "vision-religionAndScience": {
+    "aspect": 0.8,
+    "meaning": "A nautilus: one object that is both wonder and mathematics.",
+    "widths": [
+      480,
+      768
+    ],
+    "blurDataUrl": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABQBACdASoUABkAPu1irU+ppSQiMBgIATAdiWcAABQw2kzXw0sf6A/JF0AAAOcZReBYYwIK9Az3EeUkbffJ/ZOEogf7zKZmJ4EY754aIBudG8/dLdMbBx2ju2lvlaFDmufpHll0gAAAAA=="
+  },
+  "vision-humanity": {
+    "aspect": 0.8,
+    "meaning": "A murmuration: thousands of equals moving as one body.",
+    "widths": [
+      480,
+      768
+    ],
+    "blurDataUrl": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAADwBACdASoUABkAPu1sq1EppaOiqAqpMB2JZwDE2auEFoHRm0oaIi3tycwhA8T/UAAA/tmKNMnkfVYCpClYtr5SChkFEEXh5371CBoqU53ceNZuQ3SvL0J3PSixinsRFI3vInGjo/L6WDWW5wPZPH48CBG9GkX49ksvBsfasSziCZVoYwl5b/9whcAQmUuOu51MDWrAAAA="
+  },
+  "vision-oneCountry": {
+    "aspect": 0.8,
+    "meaning": "Earthrise: not one border is visible from there.",
+    "widths": [
+      480,
+      768,
+      1200
+    ],
+    "blurDataUrl": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQBACdASoUABkAPulkq02pJaQiMBgMASAdCWcAyrQQ7+D0fb5SoPLXa0rLVl+ikAD+68qDAKhh4sD+uU04btgtJS1loCPZkR6u0W4bxC0liYyBEg7aYoQ/RfBvGbpUo8Ortt+UgAA="
+  },
+  "vision-shortLife": {
+    "aspect": 0.8,
+    "meaning": "A dandelion clock, one breath from gone.",
+    "widths": [
+      480,
+      768
+    ],
+    "blurDataUrl": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAABwBQCdASoUABkAPu1ur1KppiQiqAgBMB2JZwDMHBDdvM8kZ8hJ4+1xDSUrUTjy50UDrcQAAP7LWzDKKFA0ft/7zY+16qnW/lHdeC/j5fiHSwFH+vAz0DXFe2+LJ+4EbD2I0mwfL9k4Me6HlqdXB0mLmNMZATNrMHG9CnHTBNGqUqaRhIsR+u/Wj4AAAAAA"
   }
 } as const satisfies Record<string, PhotoAsset>;
 

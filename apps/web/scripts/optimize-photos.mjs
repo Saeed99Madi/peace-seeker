@@ -29,6 +29,16 @@ const PHOTOS = [
   { name: 'horizon', aspect: 4 / 5, duotone: true, meaning: 'A level horizon: the one line with nothing above anything.' },
   { name: 'path', aspect: 4 / 5, duotone: true, meaning: 'A path anyone may walk. No gate and no one at it.' },
   { name: 'reflection', aspect: 4 / 5, duotone: true, meaning: 'Still water: whatever one side has, the other has exactly.' },
+
+  // One photograph for each statement of the vision (§2), all duotone, all
+  // pre-cropped to 4:5 in photos-src so the pipeline only has to scale.
+  { name: 'vision-creation', aspect: 4 / 5, duotone: true, meaning: 'The Pillars of Creation: matter becoming stars.' },
+  { name: 'vision-nerveCell', aspect: 4 / 5, duotone: true, meaning: 'Purkinje neurons, the branching the statement is about.' },
+  { name: 'vision-purpose', aspect: 4 / 5, duotone: true, meaning: 'Scaffolding: the universe still being built.' },
+  { name: 'vision-religionAndScience', aspect: 4 / 5, duotone: true, meaning: 'A nautilus: one object that is both wonder and mathematics.' },
+  { name: 'vision-humanity', aspect: 4 / 5, duotone: true, meaning: 'A murmuration: thousands of equals moving as one body.' },
+  { name: 'vision-oneCountry', aspect: 4 / 5, duotone: true, meaning: 'Earthrise: not one border is visible from there.' },
+  { name: 'vision-shortLife', aspect: 4 / 5, duotone: true, meaning: 'A dandelion clock, one breath from gone.' },
 ];
 
 /**

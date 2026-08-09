@@ -7,11 +7,11 @@
     "dev": "next dev -p 3000",
     "build": "node scripts/check-messages.mjs && node scripts/check-seo.mjs && NEXT_DIST_DIR=.next-build next build",
     "start": "NEXT_DIST_DIR=.next-build next start -p ${PORT:-3000}",
-    "lint": "node scripts/check-messages.mjs && node scripts/check-seo.mjs && next lint && node scripts/check-theme.mjs && node scripts/check-layout.mjs",
+    "lint": "node scripts/check-messages.mjs && node scripts/check-seo.mjs && next lint && node scripts/check-theme.mjs && node scripts/check-layout.mjs && node scripts/check-photos.mjs",
     "typecheck": "tsc --noEmit",
     "photos:build": "node scripts/optimize-photos.mjs",
     "check:messages": "node scripts/check-messages.mjs",
-    "test": "node scripts/check-messages.mjs && node scripts/check-seo.mjs",
+    "test": "node scripts/check-messages.mjs && node scripts/check-seo.mjs && node scripts/check-photos.mjs",
     "check:seo": "node scripts/check-seo.mjs"
   },
   "dependencies": {

@@ -74,3 +74,43 @@ If yes, it fails, however beautiful it is.
 The pipeline emits AVIF and WebP at four widths plus an inline blur placeholder,
 and writes `src/lib/photos.generated.ts`. Source files are kept in the
 repository so the set can be regenerated at new sizes without re-sourcing.
+
+
+## The seven statements of the vision
+
+One photograph for each statement of §2, on `/charter`, all duotone. These are
+science and nature photography rather than pictures of people, for the reason
+given above: a face, a flag or a place can be read as belonging to one side.
+
+| File | Subject | Licence | Credit |
+|---|---|---|---|
+| `vision-creation.jpg` | [The Eagle Nebula's pillars](https://commons.wikimedia.org/wiki/File:Eagle_nebula_pillars.jpg) | Public domain | NASA / Jeff Hester / Paul Scowen (ASU) |
+| `vision-nerveCell.jpg` | [Purkinje neurons](https://commons.wikimedia.org/wiki/File:All_that_glitters_in_the_brain.jpg) | CC BY 4.0 | BrainsRusDC |
+| `vision-purpose.jpg` | [Bamboo scaffolding around a water tower](https://commons.wikimedia.org/wiki/File:Bamboo_scaffolding_around_a_water_tower.jpg) | CC0 | — |
+| `vision-religionAndScience.jpg` | [*Nautilus pompilius*, sectioned](https://commons.wikimedia.org/wiki/File:Inside_Nautilus_Pompilius.jpg) | CC BY-SA 4.0 | Philippe Alès |
+| `vision-humanity.jpg` | [A murmuration](https://commons.wikimedia.org/wiki/File:Murmuration_11-2025.jpg) | CC BY-SA 4.0 | Skander Zarrad |
+| `vision-oneCountry.jpg` | [Earthrise, Apollo 8](https://commons.wikimedia.org/wiki/File:AS08-13-2329.jpg) | Public domain | William Anders / NASA |
+| `vision-shortLife.jpg` | [Dandelion seed head](https://commons.wikimedia.org/wiki/File:Dandelion_seed_head_(Taraxacum_officinale).jpg) | CC BY-SA 4.0 | Avenue |
+
+### Licence obligations, which are real and not yet fully discharged
+
+Four of these are **not** public domain, and the Foundation should know exactly
+what that costs before launch:
+
+- **CC BY 4.0** (`vision-nerveCell`) requires attribution and a statement that
+  the work was modified. It is duotoned and cropped, so it is modified.
+- **CC BY-SA 4.0** (`vision-religionAndScience`, `vision-humanity`,
+  `vision-shortLife`) requires the same **and** requires that the adapted
+  images — our duotone crops, not the site — be offered under CC BY-SA 4.0.
+
+A line in this file is not enough for either: attribution has to be reasonable
+*for the medium*, and the medium is a web page. **Before launch, either publish
+a visible credits page listing these four with author, licence and "modified:
+duotone, cropped", or replace them with CC0 or public-domain equivalents.**
+The Navy photograph originally chosen for `vision-purpose` was replaced for a
+different reason: it was public domain, but a United States armed-forces credit
+on this particular charter is precisely the "reads as one side" problem §3.1
+exists to prevent.
+
+Every image here was found through the Wikimedia Commons API and checked by eye
+before use. Candidates showing a face, a monument or a flag were discarded.

@@ -15,7 +15,16 @@
     "religionAndScience": "La religión y la ciencia se completan mutuamente.",
     "humanity": "La humanidad es el fin.",
     "oneCountry": "El mundo entero es un solo país.",
-    "shortLife": "La vida es breve, y solo se vive una vez — ¿por qué no vivirla en paz?"
+    "shortLife": "La vida es breve, y solo se vive una vez — ¿por qué no vivirla en paz?",
+    "alt": {
+      "creation": "Los Pilares de la Creación: columnas de gas y polvo donde se forman estrellas",
+      "nerveCell": "Neuronas de Purkinje al microscopio, con las dendritas ramificadas como árboles",
+      "purpose": "Una retícula de andamios contra el cielo, algo que aún se está construyendo",
+      "religionAndScience": "Un nautilo abierto, sus cámaras en espiral logarítmica",
+      "humanity": "Una murmuración: miles de aves girando como un solo cuerpo",
+      "oneCountry": "Salida de la Tierra: la Tierra sobre el horizonte lunar, sin una sola frontera visible",
+      "shortLife": "Un vilano de diente de león, con todas sus semillas todavía"
+    }
   },
   "membership": {
     "heading": "La membresía",
